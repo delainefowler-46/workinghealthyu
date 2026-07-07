@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How Your E-Mod Is Calculated and the 3 Levers That Move It Down | Accelerate</title>
+<meta name="description" content="A plain-language breakdown of the Experience Modification Rate formula and the three specific actions that lower it. Written by Delaine Fowler, PT DPT.">
+<link rel="canonical" href="https://www.workinghealthyu.com/blog-emod-calculation">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"How Your E-Mod Is Calculated and the 3 Levers That Move It Down","description":"A plain-language breakdown of the Experience Modification Rate formula and three specific actions that lower it.","author":{"@type":"Person","name":"Delaine Fowler","honorificSuffix":"PT DPT"},"publisher":{"@type":"Organization","name":"Accelerate Therapy and Performance"},"datePublished":"2026-06-01","dateModified":"2026-06-01","mainEntityOfPage":"https://www.workinghealthyu.com/blog-emod-calculation.html","image":"https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200"}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the Experience Modification Rate (E-Mod)?","acceptedAnswer":{"@type":"Answer","text":"The Experience Modification Rate, or E-Mod, is a multiplier applied to your base workers compensation premium. A rate of 1.0 means you pay the industry-average rate. Below 1.0 means you pay less than average. Above 1.0 means you pay a penalty for worse-than-average claims history. It is calculated using three years of claims history compared against expected claims for your industry and workforce size."}},{"@type":"Question","name":"How do Medical-Only claims affect the E-Mod differently from indemnity claims?","acceptedAnswer":{"@type":"Answer","text":"Most states apply approximately a 70% discount to Medical-Only claims in the E-Mod formula compared to lost-time indemnity claims. This means the same injury, handled with immediate first-aid care and kept as Medical-Only, has dramatically less impact on your E-Mod than the same injury that results in lost time and wage replacement payments."}},{"@type":"Question","name":"How does claim reporting speed affect workers compensation costs?","acceptedAnswer":{"@type":"Answer","text":"Claims reported within 24 to 48 hours cost significantly less than delayed claims. A study by The Hartford found that a one-week delay in reporting increases claim costs by approximately 10%. Claims filed a month or more after the injury cost approximately 48% more to settle than those reported in the first week."}},{"@type":"Question","name":"What is a good E-Mod score?","acceptedAnswer":{"@type":"Answer","text":"An E-Mod below 1.0 is considered favorable and results in a premium credit. An E-Mod of 0.85 means you are paying 15% less than the industry baseline. Most insurers view anything below 1.0 favorably when underwriting. An E-Mod above 1.25 typically begins to restrict your marketplace options significantly."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.workinghealthyu.com/"},{"@type":"ListItem","position":2,"name":"Resources","item":"https://www.workinghealthyu.com/index.html"},{"@type":"ListItem","position":3,"name":"How Your E-Mod Is Calculated","item":"https://www.workinghealthyu.com/blog-emod-calculation.html"}]}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#004251; --navy-dark:#002A35; --navy-mid:#005A6E;
+  --orange:#DA000B; --orange-light:#E83040; --orange-pale:#FDEAEB;
+  --white:#FFFFFF; --off-white:#F7F8FA;
+  --gray-100:#EEF0F3; --gray-300:#C8CDD5; --gray-500:#7A8494; --gray-700:#3D4554;
+  --text:#1A2030; --text-muted:#5A6478;
+  --radius-sm:6px; --radius:12px; --radius-lg:20px;
+  --font:'Inter',system-ui,-apple-system,sans-serif;
+  --font-display:'Fraunces',Georgia,serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,400&display=swap');
+html{scroll-behavior:smooth;}
+body{font-family:var(--font);color:var(--text);background:var(--white);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased;}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--gray-100);padding:0 2rem;}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:68px;gap:2rem;}
+.nav-logo{flex-shrink:0;display:flex;align-items:center;}
+.nav-links{display:flex;gap:2rem;list-style:none;}
+.nav-links a{font-size:.9rem;font-weight:500;color:var(--gray-700);transition:color .2s;}
+.nav-links a:hover{color:var(--navy);}
+.nav-cta{background:var(--orange);color:var(--white)!important;padding:.55rem 1.25rem;border-radius:var(--radius-sm);font-size:.875rem;font-weight:600;white-space:nowrap;}
+.nav-cta:hover{background:var(--orange-light)!important;}
+.nav-mobile-toggle{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:4px;}
+.nav-mobile-toggle span{display:block;width:24px;height:2px;background:var(--navy);border-radius:2px;}
+
+/* BREADCRUMB */
+.breadcrumb{max-width:840px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.82rem;color:var(--text-muted);}
+.breadcrumb a{color:var(--orange);font-weight:500;}
+.breadcrumb a:hover{text-decoration:underline;}
+
+/* ARTICLE HERO */
+.article-hero{max-width:840px;margin:0 auto;padding:2rem 2rem 2.5rem;}
+.article-tag{display:inline-flex;align-items:center;gap:.4rem;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--orange);background:var(--orange-pale);border:1px solid #F5C9A0;padding:.3rem .85rem;border-radius:100px;margin-bottom:1.25rem;}
+.article-hero h1{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:1rem;}
+.article-dek{font-size:1.15rem;color:var(--text-muted);line-height:1.6;max-width:680px;}
+.article-meta{display:flex;gap:1.5rem;margin-top:1.5rem;font-size:.85rem;color:var(--gray-500);flex-wrap:wrap;}
+
+/* ARTICLE IMAGE */
+.article-hero-img{width:100%;border-radius:var(--radius-lg);overflow:hidden;max-height:420px;margin-top:2rem;}
+.article-hero-img img{width:100%;height:100%;object-fit:cover;display:block;}
+
+/* ARTICLE BODY */
+.article-body{max-width:740px;margin:0 auto;padding:0 2rem 2rem;}
+.article-body h2{font-family:var(--font-display);font-size:1.5rem;color:var(--navy);font-weight:700;margin:2.5rem 0 1rem;line-height:1.3;}
+.article-body h3{font-size:1.1rem;color:var(--navy);font-weight:600;margin:1.75rem 0 .75rem;}
+.article-body p{font-size:1.02rem;color:var(--text);line-height:1.75;margin-bottom:1.25rem;}
+.article-body ul, .article-body ol{margin:0 0 1.25rem 1.25rem;}
+.article-body li{font-size:1.02rem;color:var(--text);line-height:1.7;margin-bottom:.5rem;}
+.article-body strong{color:var(--navy);font-weight:600;}
+.article-body a.inline-link{color:var(--orange);font-weight:600;border-bottom:1px solid currentColor;}
+
+/* STAT CALLOUT */
+.stat-callout-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2rem 0;}
+.stat-callout{background:var(--off-white);border-radius:var(--radius);padding:1.5rem 1.25rem;text-align:center;border:1px solid var(--gray-100);}
+.stat-callout .num{font-family:var(--font-display);font-size:2rem;font-weight:700;color:var(--orange);line-height:1;margin-bottom:.4rem;}
+.stat-callout .lbl{font-size:.82rem;color:var(--text-muted);line-height:1.4;}
+
+/* PULL QUOTE */
+.pull-quote{border-left:3px solid var(--orange);background:var(--off-white);border-radius:0 var(--radius) var(--radius) 0;padding:1.5rem 1.75rem;margin:2rem 0;}
+.pull-quote p{font-size:1.1rem;font-style:italic;color:var(--navy);margin-bottom:0;font-family:var(--font-display);line-height:1.5;}
+
+/* INFO BOX */
+.info-box{background:var(--navy);color:var(--white);border-radius:var(--radius-lg);padding:2rem;margin:2.5rem 0;}
+.info-box h3{color:var(--white);font-family:var(--font-display);font-size:1.2rem;margin-bottom:1rem;}
+.info-box p{color:rgba(255,255,255,.78);margin-bottom:1rem;font-size:.95rem;}
+.info-box ul{margin-left:1.25rem;}
+.info-box li{color:rgba(255,255,255,.78);font-size:.95rem;margin-bottom:.6rem;}
+.info-box li strong{color:#00CFDD;}
+
+/* SOURCES */
+.sources-section{background:var(--off-white);border-top:1px solid var(--gray-100);margin-top:3rem;padding:2.5rem 2rem;}
+.sources-inner{max-width:740px;margin:0 auto;}
+.sources-inner h3{font-family:var(--font-display);font-size:1.05rem;color:var(--navy);margin-bottom:1rem;}
+.sources-list{list-style:none;display:flex;flex-direction:column;gap:.6rem;}
+.sources-list li{font-size:.82rem;color:var(--text-muted);line-height:1.5;padding-left:1.25rem;position:relative;}
+.sources-list li::before{content:'—';position:absolute;left:0;color:var(--orange);}
+.sources-list a{color:var(--orange);text-decoration:underline;}
+
+/* CTA BAND */
+.article-cta{max-width:740px;margin:3rem auto 0;padding:0 2rem;}
+.cta-box-inline{background:var(--navy);border-radius:var(--radius-lg);padding:2.5rem;text-align:center;color:var(--white);}
+.cta-box-inline h3{font-family:var(--font-display);font-size:1.4rem;margin-bottom:.75rem;line-height:1.3;}
+.cta-box-inline h3 em{font-style:italic;color:#00CFDD;}
+.cta-box-inline p{color:rgba(255,255,255,.75);margin-bottom:1.5rem;font-size:.95rem;}
+.btn-primary{background:var(--orange);color:var(--white);padding:.85rem 1.75rem;border-radius:var(--radius-sm);font-weight:600;font-size:1rem;border:none;cursor:pointer;display:inline-block;transition:background .2s;}
+.btn-primary:hover{background:var(--orange-light);}
+
+/* RELATED */
+.related-section{max-width:840px;margin:3rem auto 0;padding:0 2rem 3rem;}
+.related-section h3{font-family:var(--font-display);font-size:1.2rem;color:var(--navy);margin-bottom:1.25rem;}
+.related-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;}
+.related-card{border:1px solid var(--gray-100);border-radius:var(--radius);padding:1.25rem;transition:box-shadow .2s,transform .2s;}
+.related-card:hover{box-shadow:0 8px 24px rgba(0,66,81,.1);transform:translateY(-2px);}
+.related-card .tag{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--orange);margin-bottom:.5rem;display:block;}
+.related-card h4{font-size:.92rem;font-weight:600;color:var(--navy);line-height:1.4;}
+
+/* FOOTER */
+footer{background:var(--navy-dark);color:rgba(255,255,255,.7);padding:3rem 2rem 2rem;margin-top:2rem;}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:2rem;}
+.footer-brand p{font-size:.88rem;line-height:1.65;max-width:260px;margin-top:.75rem;}
+.footer-col h4{font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.5);margin-bottom:1rem;}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem;}
+.footer-col a{font-size:.88rem;color:rgba(255,255,255,.65);transition:color .2s;}
+.footer-col a:hover{color:var(--white);}
+.footer-bottom{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;font-size:.82rem;flex-wrap:wrap;gap:.5rem;}
+
+/* BOOKING POPUP */
+.popup-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,42,53,.85);z-index:1000;align-items:center;justify-content:center;padding:1rem;}
+.popup-overlay.active{display:flex;}
+.popup-box{background:var(--white);border-radius:var(--radius-lg);width:100%;max-width:780px;max-height:90vh;overflow-y:auto;position:relative;box-shadow:0 24px 80px rgba(0,0,0,.4);}
+.popup-header{background:var(--navy);padding:1.25rem 1.75rem;border-radius:var(--radius-lg) var(--radius-lg) 0 0;display:flex;align-items:center;justify-content:space-between;}
+.popup-header h3{font-family:var(--font-display);font-size:1.1rem;color:var(--white);font-weight:700;}
+.popup-header p{font-size:.8rem;color:rgba(255,255,255,.65);margin-top:.2rem;}
+.popup-close{background:rgba(255,255,255,.1);border:none;color:var(--white);width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.popup-close:hover{background:rgba(255,255,255,.2);}
+.popup-body{padding:0;min-height:600px;}
+.popup-body iframe{width:100%;min-height:600px;border:none;display:block;}
+
+@media(max-width:768px){
+  nav{padding:0 1rem;}
+  .nav-links{display:none;}
+  .nav-mobile-toggle{display:flex;}
+  .nav-links.open{display:flex;flex-direction:column;position:fixed;top:68px;left:0;right:0;background:var(--white);padding:1.5rem;border-bottom:1px solid var(--gray-100);gap:1.25rem;z-index:99;}
+  .stat-callout-row{grid-template-columns:1fr;}
+  .related-grid{grid-template-columns:1fr;}
+  .footer-inner{grid-template-columns:1fr 1fr;gap:2rem;}
+  .article-hero, .article-body{padding-left:1.25rem;padding-right:1.25rem;}
+}
+</style>
+</head>
+<style>
+/* ── SIDEBAR LAYOUT ───────────────────────────────── */
+.article-with-sidebar{display:grid;grid-template-columns:1fr 300px;gap:3rem;max-width:1100px;margin:0 auto;padding:0 2rem;}
+.article-main{min-width:0;}
+.article-sidebar{display:flex;flex-direction:column;gap:1.5rem;}
+.sidebar-card{background:var(--off-white);border-radius:var(--radius);padding:1.5rem;border:1px solid var(--gray-100);}
+.sidebar-card.dark{background:var(--navy);color:var(--white);}
+.sidebar-card h4{font-family:var(--font-display);font-size:1rem;color:var(--navy);margin-bottom:1rem;font-weight:700;}
+.sidebar-card.dark h4{color:var(--white);}
+.sidebar-stat{margin-bottom:1rem;padding-bottom:1rem;border-bottom:1px solid var(--gray-100);}
+.sidebar-card.dark .sidebar-stat{border-bottom-color:rgba(255,255,255,.1);}
+.sidebar-stat:last-child{margin-bottom:0;padding-bottom:0;border-bottom:none;}
+.sidebar-stat .big{font-family:var(--font-display);font-size:2rem;font-weight:700;color:var(--orange);line-height:1;}
+.sidebar-card.dark .sidebar-stat .big{color:#00CFDD;}
+.sidebar-stat .label{font-size:.8rem;color:var(--text-muted);margin-top:.25rem;line-height:1.4;}
+.sidebar-card.dark .sidebar-stat .label{color:rgba(255,255,255,.6);}
+.sidebar-cta-btn{display:block;background:var(--orange);color:var(--white);text-align:center;padding:.75rem 1rem;border-radius:var(--radius-sm);font-weight:600;font-size:.9rem;margin-top:.5rem;transition:background .2s;}
+.sidebar-cta-btn:hover{background:var(--orange-light);}
+
+/* ── TWO-COLUMN CONTENT BLOCK ─────────────────────── */
+.two-col-block{display:grid;grid-template-columns:1fr 1fr;gap:3rem;align-items:center;margin:3rem 0;}
+.two-col-block.reverse{direction:rtl;}
+.two-col-block.reverse > *{direction:ltr;}
+.two-col-img{border-radius:var(--radius-lg);overflow:hidden;height:280px;}
+.two-col-img img{width:100%;height:100%;object-fit:cover;}
+.two-col-text h3{font-family:var(--font-display);font-size:1.35rem;color:var(--navy);font-weight:700;margin-bottom:.75rem;}
+.two-col-text p{font-size:.97rem;color:var(--text);line-height:1.75;}
+
+/* ── GIANT OPENING STAT ───────────────────────────── */
+.opening-stat-hero{background:var(--navy);border-radius:var(--radius-lg);padding:3rem;text-align:center;margin-bottom:3rem;color:var(--white);}
+.opening-stat-hero .giant-num{font-family:var(--font-display);font-size:clamp(4rem,10vw,7rem);font-weight:700;color:#00CFDD;line-height:1;}
+.opening-stat-hero .giant-label{font-size:1.1rem;color:rgba(255,255,255,.75);margin-top:.5rem;max-width:500px;margin-left:auto;margin-right:auto;}
+.opening-stat-hero .giant-source{font-size:.75rem;color:rgba(255,255,255,.35);margin-top:.75rem;}
+
+/* ── PROCESS STEPS (numbered flow) ───────────────── */
+.process-flow{display:flex;flex-direction:column;gap:0;margin:2.5rem 0;}
+.process-flow-item{display:grid;grid-template-columns:60px 1fr;gap:1.5rem;align-items:flex-start;padding:1.5rem 0;border-bottom:1px solid var(--gray-100);}
+.process-flow-item:last-child{border-bottom:none;}
+.process-flow-num{width:48px;height:48px;border-radius:50%;background:var(--navy);color:var(--white);font-family:var(--font-display);font-size:1.2rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.process-flow-content h3{font-size:1rem;font-weight:600;color:var(--navy);margin-bottom:.4rem;}
+.process-flow-content p{font-size:.92rem;color:var(--text-muted);line-height:1.65;}
+.process-flow-content .flow-tag{display:inline-block;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--orange);background:var(--orange-pale);padding:.2rem .6rem;border-radius:100px;margin-bottom:.5rem;}
+
+/* ── TIMELINE ─────────────────────────────────────── */
+.timeline{position:relative;margin:2.5rem 0;padding-left:2rem;}
+.timeline::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:linear-gradient(to bottom,var(--orange),var(--navy));}
+.timeline-item{position:relative;padding:0 0 2.5rem 2rem;}
+.timeline-item:last-child{padding-bottom:0;}
+.timeline-dot{position:absolute;left:-2.45rem;top:.2rem;width:14px;height:14px;border-radius:50%;background:var(--orange);border:3px solid var(--white);box-shadow:0 0 0 2px var(--orange);}
+.timeline-item.neutral .timeline-dot{background:var(--navy);box-shadow:0 0 0 2px var(--navy);}
+.timeline-date{font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:var(--orange);margin-bottom:.35rem;}
+.timeline-item.neutral .timeline-date{color:var(--navy);}
+.timeline-item h3{font-size:1rem;font-weight:600;color:var(--navy);margin-bottom:.4rem;}
+.timeline-item p{font-size:.92rem;color:var(--text-muted);line-height:1.65;}
+
+/* ── SURVIVAL COUNTDOWN GRAPHIC ──────────────────── */
+.survival-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:.75rem;margin:2rem 0;}
+.survival-cell{background:var(--navy);border-radius:var(--radius-sm);padding:1.25rem .75rem;text-align:center;color:var(--white);position:relative;}
+.survival-cell .minute{font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:#00CFDD;line-height:1;}
+.survival-cell .odds{font-size:.72rem;color:rgba(255,255,255,.65);margin-top:.3rem;line-height:1.4;}
+.survival-cell.danger .minute{color:#FF6B6B;}
+.survival-cell.critical{background:rgba(218,0,11,.15);border:1px solid rgba(218,0,11,.3);}
+
+/* ── FAQ ACCORDION ────────────────────────────────── */
+.faq-section{margin:3rem 0;}
+.faq-section h2{font-family:var(--font-display);font-size:1.5rem;color:var(--navy);margin-bottom:1.5rem;}
+.faq-item{border-bottom:1px solid var(--gray-100);}
+.faq-question{width:100%;background:none;border:none;text-align:left;padding:1.1rem 0;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:1rem;}
+.faq-question span{font-size:.97rem;font-weight:600;color:var(--navy);line-height:1.4;}
+.faq-icon{width:22px;height:22px;flex-shrink:0;background:var(--orange-pale);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.85rem;color:var(--orange);transition:transform .2s;}
+.faq-item.open .faq-icon{transform:rotate(45deg);}
+.faq-answer{max-height:0;overflow:hidden;transition:max-height .3s ease;}
+.faq-item.open .faq-answer{max-height:400px;}
+.faq-answer p{font-size:.92rem;color:var(--text-muted);line-height:1.7;padding-bottom:1.25rem;}
+
+/* ── MID-ARTICLE IMAGE ────────────────────────────── */
+.mid-article-img{border-radius:var(--radius-lg);overflow:hidden;margin:2.5rem 0;height:320px;}
+.mid-article-img img{width:100%;height:100%;object-fit:cover;}
+.img-caption{font-size:.78rem;color:var(--gray-500);text-align:center;margin-top:.5rem;font-style:italic;}
+
+/* ── HIGHLIGHT BOX (alternate to info-box) ────────── */
+.highlight-box{border:2px solid var(--orange);border-radius:var(--radius);padding:1.75rem;margin:2rem 0;background:var(--orange-pale);}
+.highlight-box h3{font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:.6rem;}
+.highlight-box p{font-size:.92rem;color:var(--text);line-height:1.7;margin-bottom:0;}
+
+/* ── CHECKLIST ────────────────────────────────────── */
+.checklist{list-style:none;margin:1rem 0 1.5rem;display:flex;flex-direction:column;gap:.65rem;}
+.checklist li{display:flex;gap:.75rem;align-items:flex-start;font-size:.95rem;color:var(--text);line-height:1.6;}
+.checklist li::before{content:'✓';color:var(--orange);font-weight:700;font-size:1rem;flex-shrink:0;margin-top:.1rem;}
+
+/* ── WIDE PULL QUOTE (centered) ──────────────────── */
+.pull-quote-center{text-align:center;padding:2.5rem 2rem;margin:2.5rem 0;background:var(--off-white);border-radius:var(--radius-lg);}
+.pull-quote-center p{font-family:var(--font-display);font-size:1.3rem;color:var(--navy);font-style:italic;line-height:1.5;max-width:600px;margin:0 auto;}
+.pull-quote-center cite{display:block;font-size:.8rem;color:var(--gray-500);margin-top:.75rem;font-style:normal;}
+
+/* ── RESPONSIVE ───────────────────────────────────── */
+@media(max-width:900px){
+  .article-with-sidebar{grid-template-columns:1fr;}
+  .article-sidebar{display:grid;grid-template-columns:1fr 1fr;gap:1rem;}
+}
+@media(max-width:768px){
+  .article-with-sidebar{padding:0 1.25rem;}
+  .article-sidebar{grid-template-columns:1fr;}
+  .two-col-block{grid-template-columns:1fr;}
+  .two-col-block.reverse{direction:ltr;}
+  .survival-grid{grid-template-columns:repeat(3,1fr);}
+  .mid-article-img{height:220px;}
+}
+</style>
+
+<body>
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="logo-v2.png" alt="Accelerate Therapy &amp; Performance" style="height:42px;width:auto;display:block;"></a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#industries">Industries</a></li>
+      <li><a href="index.html#results">Results</a></li>
+      <li><a href="#" onclick="openPopup();return false;" class="nav-cta">Schedule a Call</a></li>
+    </ul>
+    <button class="nav-mobile-toggle" aria-label="Toggle navigation" onclick="document.getElementById('nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="breadcrumb"><a href="index.html">Home</a> / Resources / E-Mod Calculation Guide</div>
+
+<div class="article-hero">
+  <span class="article-tag">Workers Comp</span>
+  <h1>How Your E-Mod Is Calculated and the 3 Levers That Move It Down</h1>
+  <p class="article-dek">Most employers know their Experience Modifier affects their premium. Few understand exactly which claims drive it up, or which specific actions move it back down. Here is a plain-language breakdown of both.</p>
+  <div class="article-meta">
+    <span>Written by <strong>Delaine Fowler, PT DPT</strong></span>
+    <span>6 min read</span>
+    <span>June 2026</span>
+  </div>
+  <div class="article-hero-img">
+    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1200&q=80&auto=format&fit=crop" alt="Workers compensation financial documents and E-Mod calculation review">
+    <!-- PHOTO SWAP: Replace with a photo of your team reviewing claims data with a client -->
+  </div>
+</div>
+
+<div class="article-body">
+
+  <p>Your Experience Modification Rate is one of the most consequential numbers in your entire insurance program. It's also one of the least understood.</p>
+
+  <p>It's a multiplier applied to your base workers compensation premium. An E-Mod of 1.0 means you're paying the industry-average rate for your classification. Below 1.0 means you're paying less than average. Above 1.0 means you're paying a penalty for worse-than-average claims history.</p>
+
+  <p>Move that number from 1.20 to 0.95, and the dollar impact compounds across every policy year going forward. Here's what actually drives it and the three actions that move it in your favor.</p>
+
+  <h2>What actually goes into the formula</h2>
+
+  <p>Your E-Mod is calculated by comparing your actual claims history against the expected claims history for businesses of your size and industry classification. It isn't just about how many claims you have. It's specifically about claim type and severity.</p>
+
+  <div class="stat-callout-row">
+    <div class="stat-callout"><div class="num">70%</div><div class="lbl">discount applied to Medical-Only claims in most state E-Mod formulas</div></div>
+    <div class="stat-callout"><div class="num">100%</div><div class="lbl">weight applied to indemnity lost-time claims in the same formula</div></div>
+    <div class="stat-callout"><div class="num">3</div><div class="lbl">policy years typically factored into your current E-Mod calculation</div></div>
+  </div>
+
+  <p>That 70% discount on Medical-Only claims is the most important number on this page. It's the mechanism that connects your day-to-day injury management decisions directly to your annual premium.</p>
+
+  <h2>Lever 1: Keep claims Medical-Only whenever possible</h2>
+
+  <p>This is the single biggest lever available to most employers and it's almost entirely within your control.</p>
+
+  <p>A Medical-Only claim is one where the employee receives treatment but doesn't lose time from work and doesn't receive wage replacement payments. In most state E-Mod formulas, that claim carries roughly 70% less weight than a lost-time indemnity claim.</p>
+
+  <p>In practice, this means the same injury can have dramatically different E-Mod impact depending entirely on how quickly and effectively it was managed. An employee with a minor strain who receives immediate, qualified first-aid care and stays on the job generates a small Medical-Only claim. The same strain, left unaddressed until it requires formal medical referral and time away, becomes a full indemnity claim. Identical injury. Vastly different outcome.</p>
+
+  <div class="mid-article-img">
+    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=1200&q=80&auto=format&fit=crop" alt="Operations leader reviewing workers compensation claims data and E-Mod trend">
+    <!-- PHOTO SWAP: Replace with a photo of your specialist documenting an early intervention interaction -->
+  </div>
+  <p class="img-caption">Every logged early intervention interaction is documentation that can be used at your pre-renewal claim review to challenge reserve amounts and support a lower E-Mod.</p>
+
+  <h2>Lever 2: Cut reporting lag time</h2>
+
+  <p>The data on this is consistent and significant.</p>
+
+  <p>A study by The Hartford found that a one-week delay in reporting an injury increases the eventual cost of that claim by roughly 10%. Claims filed a month or more after the injury cost approximately 48% more to settle than those reported in the first week.</p>
+
+  <p>This is a pure speed problem, and it's exactly why having someone visible and accessible on the floor matters so much. The faster a minor issue gets reported and addressed, the more likely it stays Medical-Only instead of escalating.</p>
+
+  <div class="pull-quote-center">
+    <p>"Claims filed a month or more after an injury cost 48% more to settle than those reported in the first week."</p>
+    <cite>The Hartford, cited via WorkCompProfessionals</cite>
+  </div>
+
+  <h2>Lever 3: Return injured employees to modified duty quickly</h2>
+
+  <p>When an employee does need time away from their normal role, how quickly you get them back, even into a modified capacity, has an outsized effect on the claim's ultimate cost and E-Mod impact.</p>
+
+  <p>A 10-year program study found that lost-time claims decreased by 73% and total workers compensation costs fell by 54% in organizations running structured return-to-work programs. The mechanism is direct: every day an employee collects indemnity at home, that claim grows. Get them back into appropriate modified duty before the state waiting period ends and many claims that would have become full indemnity claims remain Medical-Only instead.</p>
+
+  <div class="info-box">
+    <h3>The compounding effect across all three levers</h3>
+    <ul>
+      <li><strong>Early intervention</strong> reduces how many incidents become claims at all</li>
+      <li><strong>Fast reporting</strong> keeps the claims that do happen smaller and less expensive</li>
+      <li><strong>Fast return-to-work</strong> keeps those claims classified as Medical-Only rather than indemnity</li>
+    </ul>
+    <p>Each lever reinforces the others. Together they are the difference between an E-Mod that quietly erodes your margins year after year and one that becomes a competitive advantage in your insurance marketplace.</p>
+  </div>
+
+  <h2>Why documentation is what makes this work at renewal time</h2>
+
+  <p>None of these levers matter if they aren't documented. When your broker sits down with the carrier for your pre-renewal claim review, objective evidence of early intervention, fast reporting, and modified duty placement gives them real leverage to challenge excessive reserves the carrier has placed on open claims, before those reserves get locked into your E-Mod calculation.</p>
+
+  <p>The facilities that win this conversation walk in with data. The ones that lose it walk in with stories.</p>
+
+  <div class="faq-section">
+    <h2>E-Mod questions we hear from operations and HR leaders</h2>
+
+    <div class="faq-item">
+      <button class="faq-question"><span>How long does it take to improve an E-Mod?</span><div class="faq-icon">+</div></button>
+      <div class="faq-answer"><p>E-Mod calculations typically use three years of claims history. That means one strong year of injury reduction and claims management starts moving your E-Mod within the next calculation cycle, but the full benefit compounds over 3 years. That's exactly why starting sooner matters more than starting perfectly — every year of improved performance adds to the calculation.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question"><span>Can we challenge an E-Mod we think is wrong?</span><div class="faq-icon">+</div></button>
+      <div class="faq-answer"><p>Yes. E-Mod calculations can be reviewed and contested if claims were incorrectly classified, reserves were set too high, or data was applied to the wrong policy year. Your broker needs documentation to build that case. An onsite program that logs every intervention creates exactly the kind of objective record that supports those challenges.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-question"><span>What is a good E-Mod score for an industrial employer?</span><div class="faq-icon">+</div></button>
+      <div class="faq-answer"><p>Anything below 1.0 is favorable and generates a premium credit. Most underwriters view 0.85 or below as a signal of strong safety culture and start offering more marketplace options. Above 1.25 or 1.30, some carriers will decline to write the policy entirely, which limits your options and can force you into higher-cost surplus lines coverage.</p></div>
+    </div>
+  </div>
+
+</div>
+
+<div class="article-cta">
+  <div class="cta-box-inline">
+    <h3>See where your E-Mod could realistically <em>move</em></h3>
+    <p>We will walk through your current claims history and show you exactly which levers would have the biggest impact for your organization.</p>
+    <a href="#" onclick="openPopup();return false;" class="btn-primary">Schedule Your Assessment Call</a>
+  </div>
+</div>
+
+<div class="sources-section">
+  <div class="sources-inner">
+    <h3>References</h3>
+    <ul class="sources-list">
+      <li>SFM Mutual Insurance. "Why Return to Work Matters." E-Mod claim weighting analysis. <a href="https://www.sfmic.com" target="_blank" rel="noopener">sfmic.com</a></li>
+      <li>The Hartford. Claim reporting lag time cost analysis, cited via WorkCompProfessionals.com.</li>
+      <li>Journal of Occupational and Environmental Medicine. 10-year return-to-work program tracking study.</li>
+      <li>National Council on Compensation Insurance (NCCI). Experience Rating methodology overview. <a href="https://www.ncci.com" target="_blank" rel="noopener">ncci.com</a></li>
+      <li>Sheakley Absence Management. "The True Value of Modified Duty Off-Site Return to Work." <a href="https://www.sheakley.com" target="_blank" rel="noopener">sheakley.com</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="related-section">
+  <h3>Related resources</h3>
+  <div class="related-grid">
+    <a href="return-to-work-coaching.html" class="related-card"><span class="tag">Service</span><h4>Return-to-Work Coaching</h4></a>
+    <a href="early-intervention.html" class="related-card"><span class="tag">Service</span><h4>Onsite Early Intervention</h4></a>
+    <a href="blog-roi-breakdown.html" class="related-card"><span class="tag">Resource</span><h4>What a 3:1 ROI Actually Looks Like</h4></a>
+  </div>
+</div>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="logo-v2.png" alt="Accelerate Therapy &amp; Performance" style="height:48px;width:auto;display:block;">
+      <p>Onsite workforce health and injury prevention programs for industrial employers across the United States.</p>
+      <p style="margin-top:1rem;font-size:.82rem;">info@accelerate-pt.com</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="early-intervention.html">Early Intervention</a></li>
+        <li><a href="ergonomic-assessment.html">Ergonomic Assessment</a></li>
+        <li><a href="physical-demand-analysis.html">Physical Demand Analysis</a></li>
+        <li><a href="fit-for-duty-testing.html">Fit For Duty Testing</a></li>
+        <li><a href="return-to-work-coaching.html">Return-to-Work Coaching</a></li>
+        <li><a href="cpr-emergency-training.html">CPR Training</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="blog-emod-calculation.html">E-Mod Calculation Guide</a></li>
+        <li><a href="blog-ergonomic-fatigue-turnover.html">Fatigue &amp; Turnover</a></li>
+        <li><a href="blog-roi-breakdown.html">ROI Breakdown</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="index.html#results">Results</a></li>
+        <li><a href="#" onclick="openPopup();return false;">Schedule a Call</a></li>
+        <li><a href="https://acceleratetherapyperformance.careerplug.com/jobs" target="_blank" rel="noopener">Join Our Team</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Accelerate Therapy and Performance. All rights reserved.</span>
+    <span>Serving employers across the United States</span>
+  </div>
+</footer>
+
+<div class="popup-overlay" id="booking-popup" onclick="closePopup(event)">
+  <div class="popup-box">
+    <div class="popup-header">
+      <div>
+        <h3>Schedule Your Workforce Assessment Call</h3>
+        <p>30 minutes &middot; No obligation &middot; Pick a time that works for you</p>
+      </div>
+      <button class="popup-close" onclick="document.getElementById('booking-popup').classList.remove('active')" aria-label="Close">&#10005;</button>
+    </div>
+    <div class="popup-body">
+      <iframe src="https://api.leadconnectorhq.com/widget/booking/a84pBUlVlKyMKjQHp7hi" scrolling="no" id="a84pBUlVlKyMKjQHp7hi_1782821579368"></iframe>
+    </div>
+  </div>
+</div>
+<script src="https://api.leadconnectorhq.com/js/form_embed.js" type="text/javascript"></script>
+<script>
+function openPopup(){document.getElementById('booking-popup').classList.add('active');document.body.style.overflow='hidden';}
+function closePopup(event){if(event.target===document.getElementById('booking-popup')){document.getElementById('booking-popup').classList.remove('active');document.body.style.overflow='';}}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){document.getElementById('booking-popup').classList.remove('active');document.body.style.overflow='';}});
+</script>
+
+<script>
+document.querySelectorAll('.faq-question').forEach(function(btn){
+  btn.addEventListener('click',function(){
+    var item=this.closest('.faq-item');
+    var wasOpen=item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');});
+    if(!wasOpen) item.classList.add('open');
+  });
+});
+</script>
+
+</body>
+</html>
