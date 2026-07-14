@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Accelerate Therapy & Performance</title>
+<meta name="description" content="Since 2008, Accelerate Therapy and Performance has been putting certified Injury Prevention Specialists inside industrial facilities. Meet our leadership team and learn how we got here.">
+<link rel="canonical" href="https://www.workinghealthyu.com/about.html">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"AboutPage","name":"About Accelerate Therapy and Performance","description":"Since 2008, Accelerate has embedded certified Injury Prevention Specialists inside industrial facilities across 20 states, helping over 15,000 employees stay healthy every day.","url":"https://www.workinghealthyu.com/about.html","mainEntity":{"@type":"Organization","name":"Accelerate Therapy and Performance","foundingDate":"2008","founder":{"@type":"Person","name":"Delaine Fowler","jobTitle":"President","honorificSuffix":"PT DPT"},"numberOfEmployees":{"@type":"QuantitativeValue","minValue":100},"areaServed":"United States"}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://www.workinghealthyu.com/"},{"@type":"ListItem","position":2,"name":"About Us","item":"https://www.workinghealthyu.com/about.html"}]}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#004251;--navy-dark:#002A35;--navy-mid:#005A6E;
+  --orange:#DA000B;--orange-light:#E83040;--orange-pale:#FDEAEB;
+  --white:#FFFFFF;--off-white:#F7F8FA;
+  --gray-100:#EEF0F3;--gray-300:#C8CDD5;--gray-500:#7A8494;--gray-700:#3D4554;
+  --text:#1A2030;--text-muted:#5A6478;
+  --radius-sm:6px;--radius:12px;--radius-lg:20px;
+  --font:'Inter',system-ui,-apple-system,sans-serif;
+  --font-display:'Fraunces',Georgia,serif;
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,400&display=swap');
+html{scroll-behavior:smooth;}
+body{font-family:var(--font);color:var(--text);background:var(--white);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased;}
+img{max-width:100%;display:block;}a{color:inherit;text-decoration:none;}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--gray-100);padding:0 2rem;}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:68px;gap:2rem;}
+.nav-logo{flex-shrink:0;display:flex;align-items:center;}
+.nav-links{display:flex;gap:2rem;list-style:none;}
+.nav-links a{font-size:.9rem;font-weight:500;color:var(--gray-700);transition:color .2s;}
+.nav-links a:hover{color:var(--navy);}
+.nav-cta{background:var(--orange);color:var(--white)!important;padding:.55rem 1.25rem;border-radius:var(--radius-sm);font-size:.875rem;font-weight:600;white-space:nowrap;}
+.nav-cta:hover{background:var(--orange-light)!important;}
+.nav-mobile-toggle{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:4px;}
+.nav-mobile-toggle span{display:block;width:24px;height:2px;background:var(--navy);border-radius:2px;}
+
+/* BREADCRUMB */
+.breadcrumb{max-width:1100px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.82rem;color:var(--text-muted);}
+.breadcrumb a{color:var(--orange);font-weight:500;}
+
+/* HERO */
+.about-hero{background:var(--navy);color:var(--white);padding:5rem 2rem 4.5rem;position:relative;overflow:hidden;}
+.about-hero::after{content:'';position:absolute;top:0;right:0;width:40%;height:100%;background:linear-gradient(135deg,transparent 0%,rgba(0,207,221,.06) 100%);pointer-events:none;}
+.about-hero-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1;}
+.about-hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:rgba(218,0,11,.15);border:1px solid rgba(218,0,11,.3);color:#FF8A8A;font-size:.8rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:.35rem .85rem;border-radius:100px;margin-bottom:1.5rem;}
+.about-hero h1{font-family:var(--font-display);font-size:clamp(2rem,4vw,3rem);font-weight:700;line-height:1.15;margin-bottom:1.25rem;color:var(--white);max-width:700px;}
+.about-hero h1 em{font-style:italic;color:#00CFDD;}
+.about-hero p{font-size:1.1rem;color:rgba(255,255,255,.75);line-height:1.7;max-width:600px;}
+
+/* STATS BAND */
+.stats-band{background:var(--off-white);border-bottom:1px solid var(--gray-100);}
+.stats-band-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);padding:2.5rem 2rem;}
+.stat-item{text-align:center;padding:1rem;}
+.stat-item .num{font-family:var(--font-display);font-size:2.5rem;font-weight:700;color:var(--navy);line-height:1;margin-bottom:.35rem;}
+.stat-item .num span{color:var(--orange);}
+.stat-item .lbl{font-size:.85rem;color:var(--text-muted);line-height:1.4;}
+
+/* STORY SECTION */
+.story-section{padding:5rem 2rem;}
+.story-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
+.story-text .eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);margin-bottom:.75rem;}
+.story-text h2{font-family:var(--font-display);font-size:clamp(1.65rem,3vw,2.25rem);font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:1.5rem;}
+.story-text p{font-size:1rem;color:var(--text);line-height:1.8;margin-bottom:1.25rem;}
+.story-text p strong{color:var(--navy);font-weight:600;}
+.story-callout{background:var(--navy);border-radius:var(--radius-lg);padding:2.5rem;color:var(--white);position:sticky;top:5rem;}
+.story-callout h3{font-family:var(--font-display);font-size:1.3rem;margin-bottom:1.5rem;color:var(--white);line-height:1.3;}
+.story-callout h3 em{font-style:italic;color:#00CFDD;}
+.story-stat-row{display:flex;flex-direction:column;gap:1rem;}
+.story-stat{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:var(--radius-sm);padding:1.1rem 1.25rem;}
+.story-stat .n{font-family:var(--font-display);font-size:1.75rem;font-weight:700;color:#00CFDD;line-height:1;margin-bottom:.25rem;}
+.story-stat .l{font-size:.82rem;color:rgba(255,255,255,.65);line-height:1.4;}
+
+/* TEAM SECTION */
+.team-section{background:var(--off-white);padding:5rem 2rem;}
+.team-inner{max-width:1100px;margin:0 auto;}
+.team-header{margin-bottom:3.5rem;}
+.team-header .eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);margin-bottom:.75rem;}
+.team-header h2{font-family:var(--font-display);font-size:clamp(1.65rem,3vw,2.25rem);font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:1rem;}
+.team-header p{font-size:1.05rem;color:var(--text-muted);max-width:560px;line-height:1.7;}
+
+.team-grid{display:grid;grid-template-columns:1fr 1fr;gap:2rem;}
+.team-card{background:var(--white);border-radius:var(--radius-lg);overflow:hidden;border:1px solid var(--gray-100);}
+.team-card-top{background:var(--navy);position:relative;overflow:hidden;}
+.team-card-avatar{width:100px;height:100px;border-radius:50%;background:rgba(255,255,255,.1);border:3px solid rgba(255,255,255,.2);display:flex;align-items:center;justify-content:center;margin-bottom:1.5rem;overflow:hidden;}
+.team-card-avatar-initials{font-family:var(--font-display);font-size:2rem;font-weight:700;color:var(--white);}
+.team-card-name{font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--white);margin-bottom:.25rem;}
+.team-card-title{font-size:.85rem;color:#00CFDD;font-weight:600;letter-spacing:.03em;margin-bottom:.5rem;}
+.team-card-creds{font-size:.8rem;color:rgba(255,255,255,.5);}
+.team-card-body{padding:2rem 2.5rem 2.5rem;}
+.team-card-body p{font-size:.95rem;color:var(--text);line-height:1.75;margin-bottom:1rem;}
+.team-card-body p:last-child{margin-bottom:0;}
+.team-card-quote{border-left:3px solid var(--orange);background:var(--off-white);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:1rem 1.25rem;margin:1.25rem 0;font-style:italic;font-size:.92rem;color:var(--navy);line-height:1.6;}
+
+/* VALUES */
+.values-section{padding:5rem 2rem;background:var(--white);}
+.values-inner{max-width:1100px;margin:0 auto;}
+.values-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin-top:3rem;}
+.value-card{border-radius:var(--radius);padding:2rem;border:1px solid var(--gray-100);background:var(--off-white);}
+.value-icon{width:44px;height:44px;background:var(--navy);border-radius:var(--radius-sm);display:flex;align-items:center;justify-content:center;margin-bottom:1.25rem;}
+.value-icon svg{width:22px;height:22px;stroke:var(--white);fill:none;stroke-width:1.75;}
+.value-card h3{font-size:1rem;font-weight:600;color:var(--navy);margin-bottom:.6rem;}
+.value-card p{font-size:.88rem;color:var(--text-muted);line-height:1.65;}
+
+/* CTA */
+.about-cta{padding:5rem 2rem;background:var(--off-white);}
+.cta-box{max-width:780px;margin:0 auto;background:var(--navy);border-radius:var(--radius-lg);padding:4rem 3.5rem;text-align:center;color:var(--white);}
+.cta-box h2{font-family:var(--font-display);font-size:clamp(1.6rem,3vw,2.1rem);font-weight:700;margin-bottom:1rem;line-height:1.2;}
+.cta-box h2 em{font-style:italic;color:#00CFDD;}
+.cta-box p{font-size:1rem;color:rgba(255,255,255,.75);margin-bottom:2rem;line-height:1.65;}
+.btn-primary{background:var(--orange);color:var(--white);padding:.85rem 1.75rem;border-radius:var(--radius-sm);font-weight:600;font-size:1rem;border:none;cursor:pointer;display:inline-block;transition:background .2s;}
+.btn-primary:hover{background:var(--orange-light);}
+.cta-trust{margin-top:1.5rem;font-size:.82rem;color:rgba(255,255,255,.4);}
+
+/* FOOTER */
+footer{background:var(--navy-dark);color:rgba(255,255,255,.7);padding:3rem 2rem 2rem;}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:2rem;}
+.footer-brand p{font-size:.88rem;line-height:1.65;max-width:260px;margin-top:.75rem;}
+.footer-col h4{font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.5);margin-bottom:1rem;}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem;}
+.footer-col a{font-size:.88rem;color:rgba(255,255,255,.65);transition:color .2s;}
+.footer-col a:hover{color:var(--white);}
+.footer-bottom{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;font-size:.82rem;flex-wrap:wrap;gap:.5rem;}
+
+/* POPUP */
+.popup-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,42,53,.85);z-index:1000;align-items:center;justify-content:center;padding:1rem;}
+.popup-overlay.active{display:flex;}
+.popup-box{background:var(--white);border-radius:var(--radius-lg);width:100%;max-width:780px;max-height:90vh;overflow-y:auto;position:relative;box-shadow:0 24px 80px rgba(0,0,0,.4);}
+.popup-header{background:var(--navy);padding:1.25rem 1.75rem;border-radius:var(--radius-lg) var(--radius-lg) 0 0;display:flex;align-items:center;justify-content:space-between;}
+.popup-header h3{font-family:var(--font-display);font-size:1.1rem;color:var(--white);font-weight:700;}
+.popup-header p{font-size:.8rem;color:rgba(255,255,255,.65);margin-top:.2rem;}
+.popup-close{background:rgba(255,255,255,.1);border:none;color:var(--white);width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center;}
+.popup-close:hover{background:rgba(255,255,255,.2);}
+.popup-body iframe{width:100%;min-height:600px;border:none;display:block;}
+
+@media(max-width:768px){
+  nav{padding:0 1rem;}
+  .nav-links{display:none;}
+  .nav-mobile-toggle{display:flex;}
+  .nav-links.open{display:flex;flex-direction:column;position:fixed;top:68px;left:0;right:0;background:var(--white);padding:1.5rem;border-bottom:1px solid var(--gray-100);gap:1.25rem;z-index:99;}
+  .stats-band-inner{grid-template-columns:1fr 1fr;}
+  .story-inner{grid-template-columns:1fr;gap:2.5rem;}
+  .story-callout{position:static;}
+  .team-grid{grid-template-columns:1fr;}
+  .values-grid{grid-template-columns:1fr;}
+  .footer-inner{grid-template-columns:1fr 1fr;gap:2rem;}
+  .cta-box{padding:2.5rem 1.75rem;}
+}
+</style>
+</head>
+<body>
+
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="logo-v2.png" alt="Accelerate Therapy &amp; Performance" style="height:42px;width:auto;display:block;"></a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#industries">Industries</a></li>
+      <li><a href="index.html#results">Results</a></li>
+      <li><a href="index.html#locations">Locations</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="#" onclick="openPopup();return false;" class="nav-cta">Schedule a Call</a></li>
+    </ul>
+    <button class="nav-mobile-toggle" aria-label="Toggle navigation" onclick="document.getElementById('nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="breadcrumb"><a href="index.html">Home</a> / About Us</div>
+
+<!-- HERO -->
+<section class="about-hero">
+  <div class="about-hero-inner">
+    <div class="about-hero-eyebrow">Since 2008</div>
+    <h1>We started with one question.<br><em>What if we got there first?</em></h1>
+    <p>Before the claim. Before the surgery. Before the employee quietly decided the job wasn't worth it. That question has driven everything we have built since 2008.</p>
+  </div>
+</section>
+
+<!-- STATS BAND -->
+<div class="stats-band">
+  <div class="stats-band-inner">
+    <div class="stat-item">
+      <div class="num"><span>17</span>+</div>
+      <div class="lbl">years in workplace injury prevention</div>
+    </div>
+    <div class="stat-item">
+      <div class="num"><span>100</span>+</div>
+      <div class="lbl">Injury Prevention Specialists in the field</div>
+    </div>
+    <div class="stat-item">
+      <div class="num"><span>15</span>k+</div>
+      <div class="lbl">employees supported every day</div>
+    </div>
+    <div class="stat-item">
+      <div class="num"><span>20</span></div>
+      <div class="lbl">states with active specialist coverage</div>
+    </div>
+  </div>
+</div>
+
+<!-- OUR STORY -->
+<section class="story-section">
+  <div class="story-inner">
+    <div class="story-text">
+      <div class="eyebrow">Our story</div>
+      <h2>The clinic was full. The injuries kept coming. Something had to change.</h2>
+
+      <p>Delaine Fowler spent years treating workplace injuries as a physical therapist. The patients came in hurt. She helped them recover. They went back to work. Some of them came back again.</p>
+
+      <p>She kept asking the same question: why are we waiting for this to happen?</p>
+
+      <p>The answer, she realized, was that no one was on the floor. No one was there in the moment when a shoulder started to ache, when a worker pushed through fatigue instead of saying something, when a workstation design was quietly building toward a claim that would take months to resolve and thousands of dollars to close.</p>
+
+      <p>In 2008, she built a program to fix that. Not another phone number on a break room poster. Not a quarterly ergonomics visit. A real person, on the floor, every shift, close enough to catch what a once-a-year audit never would.</p>
+
+      <p>That model works. The data shows it. And over the past 17 years, we have taken it across 20 states to facilities in manufacturing, logistics, construction, food production, and beyond.</p>
+
+      <p><strong>Today, more than 100 Injury Prevention Specialists work inside client facilities every day.</strong> They are coaching 15,000 employees on how to work smarter, move better, and stay on the floor longer. They are documenting every interaction so that when renewal time comes, our clients walk into that meeting with evidence rather than estimates.</p>
+
+      <p>The question that started this company has not changed. We just keep finding better ways to answer it.</p>
+    </div>
+
+    <div class="story-callout">
+      <h3>Built on a care and <em>coaching model</em></h3>
+      <div class="story-stat-row">
+        <div class="story-stat">
+          <div class="n">2008</div>
+          <div class="l">Year the company was founded by Delaine Fowler, PT DPT</div>
+        </div>
+        <div class="story-stat">
+          <div class="n">100+</div>
+          <div class="l">Injury Prevention Specialists embedded inside client facilities</div>
+        </div>
+        <div class="story-stat">
+          <div class="n">15,000+</div>
+          <div class="l">Employees receiving care and coaching every single day</div>
+        </div>
+        <div class="story-stat">
+          <div class="n">20</div>
+          <div class="l">States with active coverage and growing</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team-section">
+  <div class="team-inner">
+    <div class="team-header">
+      <div class="eyebrow">Leadership</div>
+      <h2>The people who built this and run it every day</h2>
+      <p>Two people who have spent their careers inside the problem, not studying it from a distance.</p>
+    </div>
+
+    <div class="team-grid">
+
+      <!-- DELAINE -->
+      <div class="team-card">
+        <div class="team-card-top" style="padding:0;">
+          <img src="delaine-headshot.png" alt="Delaine Fowler, PT DPT, President of Accelerate Therapy and Performance" style="width:100%;height:320px;object-fit:contain;object-position:center;background:#004251;display:block;">
+        </div>
+        <div class="team-card-body">
+          <div style="margin-bottom:1.25rem;">
+            <div class="team-card-name" style="color:var(--navy);">Delaine Fowler</div>
+            <div class="team-card-title" style="color:var(--orange);">President</div>
+            <div class="team-card-creds" style="color:var(--text-muted);font-size:.8rem;">PT DPT</div>
+          </div>
+
+          <p>Delaine spent years treating workplace injuries as a physical therapist before asking the question that changed everything: why are we waiting for this to happen? She founded Accelerate in 2008 to put qualified specialists on the floor before injuries occurred, treating employees as industrial athletes rather than patients waiting to happen.</p>
+
+          <div class="team-card-quote">Applying care and coaching inside the workplace had a profoundly positive impact on the employee base we worked with. That is when I knew this was the work.</div>
+
+          <p>Today she leads Accelerate's national growth strategy and is a keynote speaker on workplace safety. Outside of work she trains for triathlons and keeps up with three boys.</p>
+        </div>
+      </div>
+
+      <!-- JAY -->
+      <div class="team-card">
+        <div class="team-card-top" style="padding:0;">
+          <img src="jay-headshot.png" alt="Jay Hubbard, COO of Accelerate Therapy and Performance" style="width:100%;height:320px;object-fit:cover;object-position:center top;display:block;">
+        </div>
+        <div class="team-card-body">
+          <div style="margin-bottom:1.25rem;">
+            <div class="team-card-name" style="color:var(--navy);">Jay Hubbard</div>
+            <div class="team-card-title" style="color:var(--orange);">Chief Operating Officer</div>
+            <div class="team-card-creds" style="color:var(--text-muted);font-size:.8rem;">MS, LAT, ATC, PES</div>
+          </div>
+
+          <p>Jay is a 2008 Central Michigan University graduate in Athletic Training and Sports Medicine. He went on to Syracuse University as a Graduate Assistant Athletic Trainer, then spent four years at Georgetown University with the Men's Soccer program that reached the 2012 National Championship final. Before joining Accelerate, he served as Sports Medicine Field Manager at UHS Hospital in Binghamton, NY.</p>
+
+          <div class="team-card-quote">My role is to ensure our specialists have everything they need to provide the best care for the people we serve. I take pride in helping others succeed.</div>
+
+          <p>Jay manages the operational infrastructure that keeps 100-plus specialists aligned across 20 states. He spends his time outside of work with his wife Tiffany and their three children.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- VALUES -->
+<section class="values-section">
+  <div class="values-inner">
+    <div style="margin-bottom:.75rem;font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--orange);">How we work</div>
+    <h2 style="font-family:var(--font-display);font-size:clamp(1.65rem,3vw,2.25rem);font-weight:700;color:var(--navy);line-height:1.2;margin-bottom:1rem;">The things that do not change no matter the client, the state, or the industry</h2>
+    <p style="font-size:1.05rem;color:var(--text-muted);max-width:580px;line-height:1.7;">These are not values we put on a poster. They are the operating principles that show up in how every specialist shows up every shift.</p>
+
+    <div class="values-grid">
+      <div class="value-card">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>The specialist relationship is everything</h3>
+        <p>We put the same person on the same floor, every shift. Your team knows their name. They trust them. That trust is what makes employees come forward early instead of waiting until something becomes a claim.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3>We measure everything</h3>
+        <p>Every interaction is documented. Every intervention is logged. When your pre-renewal claim review comes, you walk in with data, not stories. That documentation is part of what we deliver.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        </div>
+        <h3>Early beats expensive every time</h3>
+        <p>A two-minute conversation on a Tuesday prevents a six-figure claim in November. We are built around catching things early, not managing them after the fact. That is the entire model.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+        </div>
+        <h3>The program fits the facility</h3>
+        <p>A food processing line in Milwaukee is not a distribution center in Charlotte. We build every program around the specific physical demands of your operation. Generic approaches produce generic results.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3>We speak the language of operations</h3>
+        <p>Our clients are HR directors, operations managers, and risk managers. We report in their metrics: E-Mod impact, claim reduction rates, RTW timelines. Not wellness scores. Not step counts.</p>
+      </div>
+
+      <div class="value-card">
+        <div class="value-icon">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
+        <h3>We care about the people, not just the numbers</h3>
+        <p>The financial case for prevention is strong and we make it clearly. But the reason this work matters is that real people go home healthier, move better, and stay in the workforce longer. That is worth doing regardless of the math.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="about-cta">
+  <div class="cta-box">
+    <div style="font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#00CFDD;margin-bottom:.75rem;">Ready to work together?</div>
+    <h2>Tell us about your workforce.<br><em>30 minutes. No obligation.</em></h2>
+    <p>We will walk through your current injury data, show you what a prevention program would look like for your specific operation, and give you an honest picture of what it would return.</p>
+    <a href="#" onclick="openPopup();return false;" class="btn-primary">Schedule Your Assessment Call</a>
+    <div class="cta-trust">No sales pressure. Just a straightforward conversation about your workforce.</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="logo-v2.png" alt="Accelerate Therapy &amp; Performance" style="height:48px;width:auto;display:block;">
+      <p>Onsite workforce health and injury prevention programs for industrial employers across the United States.</p>
+      <p style="margin-top:1rem;font-size:.82rem;">info@accelerate-pt.com</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="early-intervention.html">Early Intervention</a></li>
+        <li><a href="ergonomic-assessment.html">Ergonomic Assessment</a></li>
+        <li><a href="physical-demand-analysis.html">Physical Demand Analysis</a></li>
+        <li><a href="fit-for-duty-testing.html">Fit For Duty Testing</a></li>
+        <li><a href="return-to-work-coaching.html">Return-to-Work Coaching</a></li>
+        <li><a href="cpr-emergency-training.html">CPR Training</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="locations.html">Locations</a></li>
+        <li><a href="#" onclick="openPopup();return false;">Schedule a Call</a></li>
+        <li><a href="https://acceleratetherapyperformance.careerplug.com/jobs" target="_blank" rel="noopener">Join Our Team</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="blog-emod-calculation.html">E-Mod Guide</a></li>
+        <li><a href="blog-ergonomic-fatigue-turnover.html">Fatigue and Turnover</a></li>
+        <li><a href="blog-roi-breakdown.html">ROI Breakdown</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Accelerate Therapy and Performance. All rights reserved.</span>
+    <span>Serving employers across the United States</span>
+  </div>
+</footer>
+
+<!-- POPUP -->
+<div class="popup-overlay" id="booking-popup" onclick="closePopup(event)">
+  <div class="popup-box">
+    <div class="popup-header">
+      <div><h3>Schedule Your Workforce Assessment Call</h3><p>30 minutes &middot; No obligation &middot; Pick a time that works for you</p></div>
+      <button class="popup-close" onclick="document.getElementById('booking-popup').classList.remove('active')" aria-label="Close">&#10005;</button>
+    </div>
+    <div class="popup-body">
+      <iframe src="https://api.leadconnectorhq.com/widget/booking/a84pBUlVlKyMKjQHp7hi" scrolling="no"></iframe>
+    </div>
+  </div>
+</div>
+<script src="https://api.leadconnectorhq.com/js/form_embed.js" type="text/javascript"></script>
+<script>
+function openPopup(){document.getElementById('booking-popup').classList.add('active');document.body.style.overflow='hidden';}
+function closePopup(event){if(event.target===document.getElementById('booking-popup')){document.getElementById('booking-popup').classList.remove('active');document.body.style.overflow='';}}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){document.getElementById('booking-popup').classList.remove('active');document.body.style.overflow='';}});
+</script>
+</body>
+</html>
