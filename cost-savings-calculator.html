@@ -1,0 +1,979 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Injury Cost Savings Calculator | Accelerate Therapy & Performance</title>
+<meta name="description" content="Calculate how much your facility could save with a proactive injury prevention program. Enter your workforce size, industry, and ZIP code to see your estimated annual savings.">
+<link rel="canonical" href="https://www.workinghealthyu.com/cost-savings-calculator.html">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","name":"Injury Cost Savings Calculator","description":"Calculate your estimated annual savings from implementing a proactive injury prevention program with Accelerate Therapy and Performance.","url":"https://www.workinghealthyu.com/cost-savings-calculator.html"}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Fraunces:ital,opsz,wght@0,9..144,700;1,9..144,400&family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+/* ── RESET & BASE ─────────────────────────────────── */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --navy:#004251;--navy-dark:#002A35;
+  --orange:#DA000B;--orange-light:#E83040;--orange-pale:#FDEAEB;
+  --white:#FFFFFF;--off-white:#F7F8FA;
+  --gray-100:#EEF0F3;--gray-500:#7A8494;--gray-700:#3D4554;
+  --text:#1A2030;--text-muted:#5A6478;
+  --radius-sm:6px;--radius:12px;--radius-lg:20px;
+  --font:'Inter',system-ui,-apple-system,sans-serif;
+  --font-display:'Fraunces',Georgia,serif;
+}
+html{scroll-behavior:smooth;}
+body{font-family:var(--font);color:var(--text);background:var(--white);line-height:1.7;font-size:16px;-webkit-font-smoothing:antialiased;}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+
+/* ── NAV ─────────────────────────────────────────── */
+nav{position:sticky;top:0;z-index:100;background:var(--white);border-bottom:1px solid var(--gray-100);padding:0 2rem;}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:68px;gap:2rem;}
+.nav-logo{flex-shrink:0;display:flex;align-items:center;}
+.nav-links{display:flex;gap:1.75rem;list-style:none;}
+.nav-links a{font-size:.88rem;font-weight:500;color:var(--gray-700);transition:color .2s;white-space:nowrap;}
+.nav-links a:hover{color:var(--navy);}
+.nav-links a.active{color:var(--navy);font-weight:600;}
+.nav-cta{background:var(--orange);color:var(--white)!important;padding:.55rem 1.25rem;border-radius:var(--radius-sm);font-size:.875rem;font-weight:600;}
+.nav-cta:hover{background:var(--orange-light)!important;}
+.nav-mobile-toggle{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:5px;padding:4px;}
+.nav-mobile-toggle span{display:block;width:24px;height:2px;background:var(--navy);border-radius:2px;}
+
+/* ── BREADCRUMB ───────────────────────────────────── */
+.breadcrumb{max-width:1100px;margin:0 auto;padding:1.5rem 2rem 0;font-size:.82rem;color:var(--text-muted);}
+.breadcrumb a{color:var(--orange);font-weight:500;}
+
+/* ── PAGE HERO ────────────────────────────────────── */
+.calc-hero{background:var(--navy);padding:4rem 2rem 3.5rem;color:var(--white);position:relative;overflow:hidden;}
+.calc-hero::after{content:'';position:absolute;top:0;right:0;width:50%;height:100%;background:linear-gradient(135deg,transparent,rgba(0,207,221,.06));pointer-events:none;}
+.calc-hero-inner{max-width:1100px;margin:0 auto;position:relative;z-index:1;}
+.calc-hero-eyebrow{display:inline-flex;align-items:center;gap:.5rem;background:rgba(218,0,11,.15);border:1px solid rgba(218,0,11,.3);color:#FF8A8A;font-size:.78rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:.35rem .85rem;border-radius:100px;margin-bottom:1.25rem;}
+.calc-hero h1{font-family:var(--font-display);font-size:clamp(1.9rem,4vw,2.8rem);font-weight:700;line-height:1.15;margin-bottom:1rem;color:var(--white);}
+.calc-hero h1 em{font-style:italic;color:#00CFDD;}
+.calc-hero p{font-size:1.05rem;color:rgba(255,255,255,.75);line-height:1.7;max-width:580px;}
+
+/* ── HOW IT WORKS STRIP ───────────────────────────── */
+.how-strip{background:var(--off-white);border-bottom:1px solid var(--gray-100);padding:1.75rem 2rem;}
+.how-strip-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:center;gap:0;}
+.how-step{display:flex;align-items:center;gap:.75rem;padding:0 2rem;}
+.how-step-num{width:32px;height:32px;border-radius:50%;background:var(--navy);color:var(--white);font-size:.8rem;font-weight:700;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+.how-step-text{font-size:.88rem;color:var(--text-muted);line-height:1.4;}
+.how-step-text strong{display:block;color:var(--navy);font-weight:600;font-size:.9rem;}
+.how-divider{width:40px;height:1px;background:var(--gray-100);flex-shrink:0;}
+
+/* ── MAIN LAYOUT ──────────────────────────────────── */
+.calc-layout{max-width:1100px;margin:0 auto;padding:4rem 2rem 5rem;display:grid;grid-template-columns:1fr 380px;gap:4rem;align-items:start;}
+.calc-widget-wrap{position:sticky;top:88px;}
+
+/* ── LEFT COLUMN ──────────────────────────────────── */
+.calc-context h2{font-family:var(--font-display);font-size:1.5rem;font-weight:700;color:var(--navy);margin-bottom:1rem;line-height:1.3;}
+.calc-context p{font-size:.97rem;color:var(--text);line-height:1.75;margin-bottom:1.25rem;}
+.calc-context p strong{color:var(--navy);font-weight:600;}
+
+.stat-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:2rem 0;}
+.stat-box{background:var(--off-white);border:1px solid var(--gray-100);border-radius:var(--radius);padding:1.25rem;}
+.stat-box .n{font-family:var(--font-display);font-size:2rem;font-weight:700;color:var(--orange);line-height:1;margin-bottom:.3rem;}
+.stat-box .l{font-size:.82rem;color:var(--text-muted);line-height:1.4;}
+
+.what-factors{background:var(--navy);border-radius:var(--radius-lg);padding:2rem;margin:2rem 0;color:var(--white);}
+.what-factors h3{font-family:var(--font-display);font-size:1.1rem;margin-bottom:1.25rem;color:var(--white);}
+.factor-list{display:flex;flex-direction:column;gap:.75rem;}
+.factor-item{display:flex;gap:.75rem;align-items:flex-start;}
+.factor-dot{width:8px;height:8px;border-radius:50%;background:#00CFDD;flex-shrink:0;margin-top:.45rem;}
+.factor-item span{font-size:.9rem;color:rgba(255,255,255,.8);line-height:1.5;}
+
+.disclaimer{background:var(--off-white);border-left:3px solid var(--gray-100);border-radius:0 var(--radius-sm) var(--radius-sm) 0;padding:1rem 1.25rem;font-size:.8rem;color:var(--text-muted);line-height:1.6;}
+
+/* ── CTA BELOW CALCULATOR ─────────────────────────── */
+.calc-cta{background:var(--off-white);padding:4rem 2rem;}
+.calc-cta-inner{max-width:780px;margin:0 auto;background:var(--navy);border-radius:var(--radius-lg);padding:3.5rem;text-align:center;color:var(--white);}
+.calc-cta-inner .eyebrow{font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#00CFDD;margin-bottom:.75rem;}
+.calc-cta-inner h2{font-family:var(--font-display);font-size:clamp(1.5rem,3vw,2rem);font-weight:700;margin-bottom:1rem;line-height:1.2;color:var(--white);}
+.calc-cta-inner h2 em{font-style:italic;color:#00CFDD;}
+.calc-cta-inner p{font-size:1rem;color:rgba(255,255,255,.75);margin-bottom:2rem;line-height:1.65;}
+.btn-primary{background:var(--orange);color:var(--white);padding:.85rem 1.75rem;border-radius:var(--radius-sm);font-weight:600;font-size:1rem;border:none;cursor:pointer;display:inline-block;transition:background .2s;}
+.btn-primary:hover{background:var(--orange-light);}
+
+/* ── FOOTER ───────────────────────────────────────── */
+footer{background:var(--navy-dark, #002A35);color:rgba(255,255,255,.7);padding:3rem 2rem 2rem;}
+.footer-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;padding-bottom:2.5rem;border-bottom:1px solid rgba(255,255,255,.1);margin-bottom:2rem;}
+.footer-brand p{font-size:.88rem;line-height:1.65;max-width:260px;margin-top:.75rem;}
+.footer-col h4{font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.5);margin-bottom:1rem;}
+.footer-col ul{list-style:none;display:flex;flex-direction:column;gap:.6rem;}
+.footer-col a{font-size:.88rem;color:rgba(255,255,255,.65);transition:color .2s;}
+.footer-col a:hover{color:var(--white);}
+.footer-bottom{max-width:1100px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;font-size:.82rem;flex-wrap:wrap;gap:.5rem;}
+
+/* ── POPUP ────────────────────────────────────────── */
+.popup-overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,42,53,.85);z-index:1000;align-items:center;justify-content:center;padding:1rem;}
+.popup-overlay.active{display:flex;}
+.popup-box{background:var(--white);border-radius:var(--radius-lg);width:100%;max-width:780px;max-height:90vh;overflow-y:auto;box-shadow:0 24px 80px rgba(0,0,0,.4);}
+.popup-header{background:var(--navy);padding:1.25rem 1.75rem;border-radius:var(--radius-lg) var(--radius-lg) 0 0;display:flex;align-items:center;justify-content:space-between;}
+.popup-header h3{font-family:var(--font-display);font-size:1.1rem;color:var(--white);font-weight:700;}
+.popup-header p{font-size:.8rem;color:rgba(255,255,255,.65);margin-top:.2rem;}
+.popup-close{background:rgba(255,255,255,.1);border:none;color:var(--white);width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1.1rem;display:flex;align-items:center;justify-content:center;}
+.popup-close:hover{background:rgba(255,255,255,.2);}
+.popup-body iframe{width:100%;min-height:600px;border:none;display:block;}
+
+/* ── CALCULATOR WIDGET STYLES ─────────────────────── */
+
+  body {
+    margin: 0;
+    padding: 48px 16px;
+    background: #EEF2ED;
+    min-height: 100vh;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  .mcw-page-back {
+    display: block;
+    max-width: 640px;
+    margin: 0 auto 14px;
+    font-size: 13.5px;
+    color: #5B6B73;
+    text-decoration: none;
+  }
+  .mcw-page-back:hover { color: #14262F; }
+  .mcw, .mcw * { box-sizing: border-box; }
+  .mcw {
+    --ink: #14262F;
+    --paper: #EEF2ED;
+    --panel: #FFFFFF;
+    --steel: #5B6B73;
+    --steel-light: #8B9A9F;
+    --hazard: #E0932E;
+    --hazard-ink: #7A4A0E;
+    --ledger: #1F6F5C;
+    --ledger-light: #E4F0EC;
+    --rule: #D7DDD3;
+    --danger: #A6432C;
+
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: var(--ink);
+    background: var(--paper);
+    max-width: 640px;
+    margin: 0 auto;
+    border: 1px solid var(--rule);
+    border-radius: 6px;
+    overflow: hidden;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+  .mcw h1, .mcw h2, .mcw h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+  .mcw .mcw-head {
+    padding: 28px 32px 24px;
+    border-bottom: 1px solid var(--rule);
+    background: var(--panel);
+  }
+  .mcw .mcw-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--steel);
+    margin-bottom: 10px;
+  }
+  .mcw .mcw-ticks { display: flex; gap: 4px; }
+  .mcw .mcw-tick {
+    width: 18px; height: 3px; background: var(--rule); border-radius: 2px;
+    transition: background 0.25s ease;
+  }
+  .mcw .mcw-tick.is-active { background: var(--hazard); }
+  .mcw .mcw-tick.is-done { background: var(--ledger); }
+  .mcw h1 { font-size: 22px; font-weight: 700; }
+  .mcw .mcw-sub { color: var(--steel); font-size: 14.5px; margin-top: 6px; }
+
+  .mcw .mcw-body { padding: 28px 32px 32px; background: var(--panel); }
+  .mcw .mcw-step { display: none; }
+  .mcw .mcw-step.is-active { display: block; animation: mcwFade 0.35s ease; }
+  @keyframes mcwFade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
+
+  .mcw .mcw-row { display: flex; gap: 14px; }
+  .mcw .mcw-row > .mcw-field { flex: 1; min-width: 0; }
+  .mcw .mcw-field { margin-bottom: 18px; }
+  .mcw label {
+    display: block;
+    font-size: 13.5px;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: var(--ink);
+  }
+  .mcw .mcw-hint { font-size: 12.5px; color: var(--steel); margin-top: 5px; }
+  .mcw input[type="text"],
+  .mcw input[type="email"],
+  .mcw input[type="number"],
+  .mcw select {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1.5px solid var(--rule);
+    border-radius: 4px;
+    background: var(--paper);
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    color: var(--ink);
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+  .mcw input:focus, .mcw select:focus {
+    outline: none;
+    border-color: var(--hazard);
+    box-shadow: 0 0 0 3px rgba(224,147,46,0.18);
+  }
+  .mcw input:focus-visible, .mcw select:focus-visible, .mcw button:focus-visible {
+    outline: 2px solid var(--hazard);
+    outline-offset: 2px;
+  }
+  .mcw .mcw-check {
+    display: flex; align-items: flex-start; gap: 9px;
+    font-size: 13.5px; color: var(--steel); margin-top: -4px; margin-bottom: 18px;
+  }
+  .mcw .mcw-check input { margin-top: 3px; }
+
+  .mcw .mcw-actions { display: flex; justify-content: space-between; align-items: center; margin-top: 8px; }
+  .mcw .mcw-btn {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 14.5px;
+    padding: 12px 22px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.1s ease, background 0.15s ease, opacity 0.15s ease;
+  }
+  .mcw .mcw-btn:active { transform: scale(0.98); }
+  .mcw .mcw-btn-primary { background: var(--hazard); color: #201002; }
+  .mcw .mcw-btn-primary:hover { background: #cf8526; }
+  .mcw .mcw-btn-primary:disabled { background: var(--rule); color: var(--steel-light); cursor: not-allowed; }
+  .mcw .mcw-btn-ghost { background: transparent; color: var(--steel); padding: 12px 6px; }
+  .mcw .mcw-btn-ghost:hover { color: var(--ink); }
+  .mcw .mcw-error { color: var(--danger); font-size: 12.5px; margin-top: 5px; min-height: 15px; }
+
+  /* ---- Results / ledger reveal ---- */
+  .mcw .mcw-results-head { text-align: center; margin-bottom: 22px; }
+  .mcw .mcw-results-head .mcw-sub { margin-top: 8px; }
+  .mcw .mcw-stamp {
+    display: inline-block;
+    border: 2.5px solid var(--hazard);
+    color: var(--hazard-ink);
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    border-radius: 3px;
+    transform: rotate(-2deg);
+    margin-bottom: 14px;
+  }
+  .mcw .mcw-savings-number {
+    font-family: 'Space Grotesk', sans-serif;
+    font-weight: 700;
+    font-size: 44px;
+    color: var(--ledger);
+    line-height: 1.1;
+  }
+  .mcw .mcw-savings-label { font-size: 13.5px; color: var(--steel); margin-top: 4px; }
+
+  .mcw .mcw-ledger {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 5px;
+    padding: 20px 20px 6px;
+    margin-bottom: 16px;
+  }
+  .mcw .mcw-bar-row { margin-bottom: 16px; }
+  .mcw .mcw-bar-top { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; }
+  .mcw .mcw-bar-name { font-size: 13px; font-weight: 600; color: var(--steel); }
+  .mcw .mcw-bar-value { font-family: 'IBM Plex Mono', monospace; font-size: 16px; font-weight: 600; }
+  .mcw .mcw-bar-track { height: 10px; background: #E2E6DF; border-radius: 5px; overflow: hidden; }
+  .mcw .mcw-bar-fill { height: 100%; width: 0%; border-radius: 5px; transition: width 1s cubic-bezier(0.22,0.61,0.36,1); }
+  .mcw .mcw-bar-fill.current { background: repeating-linear-gradient(135deg, var(--steel), var(--steel) 6px, #7c8b91 6px, #7c8b91 12px); }
+  .mcw .mcw-bar-fill.projected { background: var(--ledger); }
+
+  .mcw .mcw-breakdown {
+    background: var(--panel);
+    border: 1px solid var(--rule);
+    border-radius: 5px;
+    padding: 16px 20px;
+    margin-bottom: 18px;
+  }
+  .mcw .mcw-breakdown-row {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr 1fr;
+    align-items: center;
+    padding: 9px 0;
+    border-bottom: 1px solid var(--rule);
+    gap: 8px;
+  }
+  .mcw .mcw-breakdown-row:last-child { border-bottom: none; }
+  .mcw .mcw-breakdown-head {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--steel-light);
+  }
+  .mcw .mcw-breakdown-head span:not(:first-child) { text-align: right; }
+  .mcw .mcw-breakdown-label { font-size: 13.5px; color: var(--steel); }
+  .mcw .mcw-breakdown-val {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 14px;
+    text-align: right;
+  }
+  .mcw .mcw-breakdown-total {
+    border-top: 1.5px solid var(--ink);
+    border-bottom: none;
+    margin-top: 2px;
+    padding-top: 11px;
+  }
+  .mcw .mcw-breakdown-total .mcw-breakdown-label { font-weight: 700; color: var(--ink); }
+  .mcw .mcw-breakdown-total .mcw-breakdown-val { font-weight: 700; font-size: 15px; }
+  .mcw .mcw-breakdown-total .mcw-breakdown-val:last-child { color: var(--ledger); }
+
+  .mcw .mcw-proof {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .mcw .mcw-proof-chip {
+    background: var(--ledger-light);
+    border-radius: 5px;
+    padding: 12px 10px;
+    text-align: center;
+  }
+  .mcw .mcw-proof-num { font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 19px; color: var(--ledger); }
+  .mcw .mcw-proof-label { font-size: 11px; color: var(--steel); margin-top: 2px; line-height: 1.3; }
+
+  .mcw .mcw-cta { display: block; text-align: center; text-decoration: none; }
+  .mcw .mcw-disclaimer {
+    font-size: 11.5px; color: var(--steel-light); margin-top: 16px; line-height: 1.5; text-align: center;
+  }
+
+  @media (max-width: 480px) {
+    .mcw .mcw-head, .mcw .mcw-body { padding-left: 20px; padding-right: 20px; }
+    .mcw .mcw-row { flex-direction: column; gap: 0; }
+    .mcw .mcw-savings-number { font-size: 34px; }
+    .mcw .mcw-proof { grid-template-columns: 1fr 1fr 1fr; }
+    .mcw .mcw-proof-num { font-size: 16px; }
+    .mcw .mcw-breakdown-row { grid-template-columns: 1.1fr 1fr 1fr; }
+    .mcw .mcw-breakdown-val { font-size: 12.5px; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .mcw .mcw-step.is-active { animation: none; }
+    .mcw .mcw-bar-fill { transition: none; }
+  }
+
+
+/* ── RESPONSIVE ───────────────────────────────────── */
+@media(max-width:900px){
+  .calc-layout{grid-template-columns:1fr;}
+  .calc-widget-wrap{position:static;}
+  .stat-row{grid-template-columns:1fr 1fr;}
+}
+@media(max-width:768px){
+  nav{padding:0 1rem;}
+  .nav-links{display:none;}
+  .nav-mobile-toggle{display:flex;}
+  .nav-links.open{display:flex;flex-direction:column;position:fixed;top:68px;left:0;right:0;background:var(--white);padding:1.5rem;border-bottom:1px solid var(--gray-100);gap:1.25rem;z-index:99;}
+  .how-strip-inner{flex-direction:column;gap:1rem;align-items:flex-start;}
+  .how-divider{display:none;}
+  .how-step{padding:0;}
+  .footer-inner{grid-template-columns:1fr 1fr;gap:2rem;}
+  .calc-cta-inner{padding:2.5rem 1.75rem;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo"><img src="logo-v2.png" alt="Accelerate Therapy &amp; Performance" style="height:42px;width:auto;display:block;"></a>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#industries">Industries</a></li>
+      <li><a href="index.html#results">Results</a></li>
+      <li><a href="index.html#locations">Locations</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="cost-savings-calculator.html" class="active">Cost Savings Calculator</a></li>
+      <li><a href="#" onclick="openPopup();return false;" class="nav-cta">Schedule a Call</a></li>
+    </ul>
+    <button class="nav-mobile-toggle" aria-label="Toggle navigation" onclick="document.getElementById('nav-links').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<div class="breadcrumb"><a href="index.html">Home</a> / Cost Savings Calculator</div>
+
+<!-- PAGE HERO -->
+<section class="calc-hero">
+  <div class="calc-hero-inner">
+    <div class="calc-hero-eyebrow">Free Tool</div>
+    <h1>See What Injuries Are<br><em>Actually Costing You</em></h1>
+    <p>Most employers underestimate the real financial impact of musculoskeletal injuries. Enter your facility details and see what a proactive prevention program could realistically return — based on your industry, your workforce size, and your state's cost environment.</p>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<div class="how-strip">
+  <div class="how-strip-inner">
+    <div class="how-step">
+      <div class="how-step-num">1</div>
+      <div class="how-step-text"><strong>Enter your facility details</strong>ZIP, industry, and employee count</div>
+    </div>
+    <div class="how-divider"></div>
+    <div class="how-step">
+      <div class="how-step-num">2</div>
+      <div class="how-step-text"><strong>Get your estimate</strong>Where should we send the results?</div>
+    </div>
+    <div class="how-divider"></div>
+    <div class="how-step">
+      <div class="how-step-num">3</div>
+      <div class="how-step-text"><strong>See your savings</strong>Your estimated annual cost reduction</div>
+    </div>
+  </div>
+</div>
+
+<!-- MAIN LAYOUT -->
+<div class="calc-layout">
+
+  <!-- LEFT: CONTEXT -->
+  <div class="calc-context">
+    <h2>Why the numbers matter more than most employers realize</h2>
+    <p>A single musculoskeletal injury costs an average of <strong>$40,000 or more</strong> in combined direct and indirect costs. That's one claim. Most facilities with 100 or more employees see several every year.</p>
+    <p>The indirect costs are the part that usually surprises people. Lost productivity, retraining time, administrative overhead, and the impact on your Experience Modification Rate — these rarely show up on the same line as the workers comp claim, but they compound year after year.</p>
+
+    <div class="stat-row">
+      <div class="stat-box"><div class="n">$4.41</div><div class="l">returned per $1 invested in injury prevention programs</div></div>
+      <div class="stat-box"><div class="n">58%</div><div class="l">average reduction in injury-related costs with a proactive program</div></div>
+      <div class="stat-box"><div class="n">50%</div><div class="l">average decrease in musculoskeletal injuries in Year 1</div></div>
+      <div class="stat-box"><div class="n">73%</div><div class="l">reduction in lost-time claims over 10 years in studied RTW programs</div></div>
+    </div>
+
+    <div class="what-factors">
+      <h3>What goes into this estimate</h3>
+      <div class="factor-list">
+        <div class="factor-item"><div class="factor-dot"></div><span>Your industry's musculoskeletal injury rate per 100 employees, based on BLS DART data</span></div>
+        <div class="factor-item"><div class="factor-dot"></div><span>A regional cost index based on your state's workers comp environment and wage rates</span></div>
+        <div class="factor-item"><div class="factor-dot"></div><span>A 58% cost reduction assumption based on documented early intervention outcomes</span></div>
+        <div class="factor-item"><div class="factor-dot"></div><span>A base cost per claim of $40,000, consistent with published industry data</span></div>
+      </div>
+    </div>
+
+    <p>This calculator gives you a directional estimate, not a guarantee. Your actual results depend on program design, implementation quality, and how engaged your workforce is. The best way to get a number specific to your facility is to schedule a call — we will walk through your actual claims history and build a realistic projection from there.</p>
+
+    <div class="disclaimer">
+      <strong>Methodology note:</strong> Industry injury rates are sourced from BLS employer-reported injury and illness data (2023-2024). Regional cost indices reflect published workers compensation cost variation by state. The 58% cost reduction assumption reflects outcomes documented in peer-reviewed early intervention program research. Individual results will vary.
+    </div>
+  </div>
+
+  <!-- RIGHT: CALCULATOR WIDGET -->
+  <div class="calc-widget-wrap">
+    <div class="mcw" id="mcw-root">
+
+  <div class="mcw-head">
+    <div class="mcw-eyebrow">
+      <span id="mcw-step-label">STEP 1 OF 3</span>
+      <span class="mcw-ticks">
+        <span class="mcw-tick" data-tick="1"></span>
+        <span class="mcw-tick" data-tick="2"></span>
+        <span class="mcw-tick" data-tick="3"></span>
+      </span>
+    </div>
+    <h1 id="mcw-title">See what MSD claims are really costing your facility</h1>
+    <div class="mcw-sub" id="mcw-subtitle">Two minutes. Built from real claim-cost and injury-rate benchmarks, not guesswork.</div>
+  </div>
+
+  <div class="mcw-body">
+
+    <!-- STEP 1: Facility profile -->
+    <section class="mcw-step is-active" data-step="1" aria-live="polite">
+      <div class="mcw-row">
+        <div class="mcw-field">
+          <label for="mcw-zip">Facility ZIP code</label>
+          <input type="text" id="mcw-zip" inputmode="numeric" maxlength="5" placeholder="e.g. 28144">
+        </div>
+        <div class="mcw-field">
+          <label for="mcw-industry">Industry</label>
+          <select id="mcw-industry">
+            <option value="">Select one</option>
+            <option value="manufacturing">Manufacturing</option>
+            <option value="warehousing">Warehousing &amp; Logistics</option>
+            <option value="grocery">Grocery Distribution</option>
+            <option value="construction">Construction</option>
+            <option value="food_production">Food Production</option>
+            <option value="other">Other Industrial</option>
+          </select>
+        </div>
+      </div>
+      <div class="mcw-field">
+        <label for="mcw-employees">Number of employees at this facility</label>
+        <input type="number" id="mcw-employees" min="1" placeholder="e.g. 250">
+      </div>
+      <div class="mcw-field">
+        <label for="mcw-claims">MSD / workplace injury claims in the last 12 months</label>
+        <input type="number" id="mcw-claims" min="0" placeholder="e.g. 9">
+        <div class="mcw-check">
+          <input type="checkbox" id="mcw-unknown-claims">
+          <label for="mcw-unknown-claims" style="margin:0; font-weight:400;">I'm not sure — estimate this for me based on my industry</label>
+        </div>
+      </div>
+      <div class="mcw-field">
+        <label for="mcw-cost-per-claim">Your average cost per claim, if known <span style="font-weight:400; color: var(--steel);">(optional)</span></label>
+        <input type="number" id="mcw-cost-per-claim" min="0" placeholder="e.g. 4500">
+        <div class="mcw-hint">Leave blank and we'll use national benchmark data adjusted for your industry and region.</div>
+        <div class="mcw-error" id="mcw-error-facility"></div>
+      </div>
+      <div class="mcw-actions">
+        <span></span>
+        <button class="mcw-btn mcw-btn-primary" id="mcw-to-step2" disabled>Continue</button>
+      </div>
+    </section>
+
+    <!-- STEP 2: Lead capture -->
+    <section class="mcw-step" data-step="2" aria-live="polite">
+      <div class="mcw-row">
+        <div class="mcw-field">
+          <label for="mcw-fname">First name</label>
+          <input type="text" id="mcw-fname" autocomplete="given-name">
+        </div>
+        <div class="mcw-field">
+          <label for="mcw-lname">Last name</label>
+          <input type="text" id="mcw-lname" autocomplete="family-name">
+        </div>
+      </div>
+      <div class="mcw-field">
+        <label for="mcw-email">Work email</label>
+        <input type="email" id="mcw-email" autocomplete="email">
+      </div>
+      <div class="mcw-check">
+        <input type="checkbox" id="mcw-consent">
+        <label for="mcw-consent" style="margin:0; font-weight:400;">Yes, send my results to this email.<br>No spam. No sharing your information with anyone. Ever.</label>
+      </div>
+      <div class="mcw-error" id="mcw-error-lead"></div>
+      <div class="mcw-actions">
+        <button class="mcw-btn mcw-btn-ghost" id="mcw-back-1">← Back</button>
+        <button class="mcw-btn mcw-btn-primary" id="mcw-to-step3" disabled>See My Estimate</button>
+      </div>
+    </section>
+
+    <!-- STEP 3: Results -->
+    <section class="mcw-step" data-step="3" aria-live="polite">
+      <div class="mcw-results-head">
+        <div class="mcw-stamp">Estimate ready</div>
+        <div class="mcw-savings-number" id="mcw-savings-figure">$0</div>
+        <div class="mcw-savings-label">Estimated total annual savings with an onsite prevention program</div>
+      </div>
+
+      <div class="mcw-ledger">
+        <div class="mcw-bar-row" style="margin-bottom: 4px;">
+          <div class="mcw-bar-top">
+            <span class="mcw-bar-name">Current total annual cost</span>
+            <span class="mcw-bar-value" id="mcw-current-value">$0</span>
+          </div>
+          <div class="mcw-bar-track"><div class="mcw-bar-fill current" id="mcw-current-bar"></div></div>
+        </div>
+        <div class="mcw-bar-row" style="margin-bottom: 4px;">
+          <div class="mcw-bar-top">
+            <span class="mcw-bar-name">Projected total cost with Accelerate</span>
+            <span class="mcw-bar-value" id="mcw-projected-value" style="color: var(--ledger);">$0</span>
+          </div>
+          <div class="mcw-bar-track"><div class="mcw-bar-fill projected" id="mcw-projected-bar"></div></div>
+        </div>
+      </div>
+
+      <div class="mcw-breakdown">
+        <div class="mcw-breakdown-row mcw-breakdown-head">
+          <span>Cost breakdown</span><span>Current</span><span>Projected</span>
+        </div>
+        <div class="mcw-breakdown-row">
+          <span class="mcw-breakdown-label">Direct costs</span>
+          <span class="mcw-breakdown-val" id="mcw-direct-current">$0</span>
+          <span class="mcw-breakdown-val" id="mcw-direct-projected">$0</span>
+        </div>
+        <div class="mcw-breakdown-row">
+          <span class="mcw-breakdown-label">Indirect costs</span>
+          <span class="mcw-breakdown-val" id="mcw-indirect-current">$0</span>
+          <span class="mcw-breakdown-val" id="mcw-indirect-projected">$0</span>
+        </div>
+        <div class="mcw-breakdown-row mcw-breakdown-total">
+          <span class="mcw-breakdown-label">Total</span>
+          <span class="mcw-breakdown-val" id="mcw-total-current">$0</span>
+          <span class="mcw-breakdown-val" id="mcw-total-projected">$0</span>
+        </div>
+      </div>
+
+      <div class="mcw-proof">
+        <div class="mcw-proof-chip">
+          <div class="mcw-proof-num">60%</div>
+          <div class="mcw-proof-label">avg. injury reduction in Year 1</div>
+        </div>
+        <div class="mcw-proof-chip">
+          <div class="mcw-proof-num">3:1</div>
+          <div class="mcw-proof-label">minimum program ROI</div>
+        </div>
+        <div class="mcw-proof-chip">
+          <div class="mcw-proof-num">70%</div>
+          <div class="mcw-proof-label">E-Mod discount on Medical-Only claims</div>
+        </div>
+      </div>
+
+      <button class="mcw-btn mcw-btn-primary mcw-cta" id="mcw-cta-book" onclick="openPopup();return false;">Schedule My Free Assessment Call</button>
+
+      <div class="mcw-disclaimer">
+        Direct cost uses your entered figure when provided, or industry/regional benchmarks otherwise. Indirect cost is estimated using OSHA's $afety Pays sliding-scale methodology (U.S. Dept. of Labor, NCCI claims data). Actual results vary by facility, claims history, and program design.
+      </div>
+    </section>
+
+  </div>
+</div>
+  </div>
+
+</div>
+
+<!-- BOTTOM CTA -->
+<section class="calc-cta">
+  <div class="calc-cta-inner">
+    <div class="eyebrow">Next step</div>
+    <h2>Get a number built on <em>your actual data</em></h2>
+    <p>The calculator gives you a directional estimate. A 30-minute call with our team gives you a projection built on your real claims history, your current E-Mod, and your specific injury risk profile.</p>
+    <a href="#" onclick="openPopup();return false;" class="btn-primary">Schedule Your Free Assessment Call</a>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="logo-v2.png" alt="Accelerate Therapy &amp; Performance" style="height:48px;width:auto;display:block;">
+      <p>Onsite workforce health and injury prevention programs for industrial employers across the United States.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Services</h4>
+      <ul>
+        <li><a href="early-intervention.html">Early Intervention</a></li>
+        <li><a href="ergonomic-assessment.html">Ergonomic Assessment</a></li>
+        <li><a href="physical-demand-analysis.html">Physical Demand Analysis</a></li>
+        <li><a href="fit-for-duty-testing.html">Fit For Duty Testing</a></li>
+        <li><a href="return-to-work-coaching.html">Return-to-Work Coaching</a></li>
+        <li><a href="cpr-emergency-training.html">CPR Training</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="locations.html">Locations</a></li>
+        <li><a href="cost-savings-calculator.html">Cost Savings Calculator</a></li>
+        <li><a href="#" onclick="openPopup();return false;">Schedule a Call</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Resources</h4>
+      <ul>
+        <li><a href="blog-emod-calculation.html">E-Mod Guide</a></li>
+        <li><a href="blog-ergonomic-fatigue-turnover.html">Fatigue &amp; Turnover</a></li>
+        <li><a href="blog-roi-breakdown.html">ROI Breakdown</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2026 Accelerate Therapy and Performance. All rights reserved.</span>
+    <span>Serving employers across the United States</span>
+  </div>
+</footer>
+
+<!-- POPUP -->
+<div class="popup-overlay" id="booking-popup" onclick="closePopup(event)">
+  <div class="popup-box">
+    <div class="popup-header">
+      <div><h3>Schedule Your Workforce Assessment Call</h3><p>30 minutes &middot; No obligation &middot; Pick a time that works for you</p></div>
+      <button class="popup-close" onclick="document.getElementById('booking-popup').classList.remove('active')" aria-label="Close">&#10005;</button>
+    </div>
+    <div class="popup-body">
+      <iframe src="https://api.leadconnectorhq.com/widget/booking/a84pBUlVlKyMKjQHp7hi" scrolling="no"></iframe>
+    </div>
+  </div>
+</div>
+<script src="https://api.leadconnectorhq.com/js/form_embed.js"></script>
+<script>
+function openPopup(){document.getElementById('booking-popup').classList.add('active');document.body.style.overflow='hidden';}
+function closePopup(e){if(e.target===document.getElementById('booking-popup')){document.getElementById('booking-popup').classList.remove('active');document.body.style.overflow='';}}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){document.getElementById('booking-popup').classList.remove('active');document.body.style.overflow='';}});
+</script>
+
+<!-- CALCULATOR LOGIC -->
+<script>
+(function () {
+  "use strict";
+
+  // ------------------------------------------------------------------
+  // PASTE YOUR LEAD-CAPTURE FORM ENDPOINT HERE (see instructions at top of file)
+  // ------------------------------------------------------------------
+  const LEAD_CAPTURE_ENDPOINT = "";
+
+  // ---- ZIP3 -> STATE lookup (approximate, standard USPS prefix ranges) ----
+  const ZIP_RANGES = [
+    [5,5,'NY'],[6,9,'PR'],[10,27,'MA'],[28,29,'RI'],[30,38,'NH'],[39,49,'ME'],
+    [50,59,'VT'],[60,69,'CT'],[70,89,'NJ'],[100,149,'NY'],[150,196,'PA'],
+    [197,199,'DE'],[200,205,'DC'],[206,219,'MD'],[220,246,'VA'],[247,268,'WV'],
+    [270,289,'NC'],[290,299,'SC'],[300,319,'GA'],[398,399,'GA'],
+    [320,339,'FL'],[341,342,'FL'],[344,344,'FL'],[346,347,'FL'],[349,349,'FL'],
+    [350,369,'AL'],[370,385,'TN'],[386,397,'MS'],[400,427,'KY'],[430,458,'OH'],
+    [460,479,'IN'],[480,499,'MI'],[500,528,'IA'],[530,549,'WI'],[550,567,'MN'],
+    [570,577,'SD'],[580,588,'ND'],[590,599,'MT'],[600,620,'IL'],[622,629,'IL'],
+    [630,658,'MO'],[660,679,'KS'],[680,693,'NE'],[700,714,'LA'],[716,729,'AR'],
+    [730,731,'OK'],[734,734,'OK'],[743,749,'OK'],[750,799,'TX'],[885,885,'TX'],
+    [800,816,'CO'],[820,831,'WY'],[832,838,'ID'],[840,847,'UT'],[850,865,'AZ'],
+    [870,884,'NM'],[889,891,'NV'],[893,898,'NV'],[900,961,'CA'],[967,968,'HI'],
+    [970,979,'OR'],[980,994,'WA'],[995,999,'AK']
+  ];
+
+  const REGION_INDEX = {
+    CA:1.20, NY:1.18, MA:1.17, WA:1.15, NJ:1.13, CT:1.12, HI:1.20, AK:1.15,
+    IL:1.08, MD:1.08, CO:1.07, OR:1.07, VA:1.06, PA:1.05, MN:1.06, RI:1.06, DE:1.05, DC:1.15,
+    OH:1.00, MI:1.00, WI:1.00, NC:0.98, GA:0.99, TX:1.00, AZ:1.00, FL:1.00, IN:0.98,
+    MO:0.97, KS:0.96, NE:0.96, IA:0.97, NV:1.02, NM:0.95, UT:1.00, ME:0.99, NH:1.03, VT:1.00,
+    SC:0.94, TN:0.95, AL:0.93, KY:0.94, WV:0.92, AR:0.92, OK:0.93, LA:0.95, MS:0.90,
+    ID:0.94, MT:0.95, ND:0.97, SD:0.94, WY:0.96, PR:0.85
+  };
+
+  const INDUSTRY_RATE = {
+    manufacturing: 2.8, warehousing: 4.5, grocery: 4.0,
+    construction: 2.3, food_production: 3.5, other: 2.3
+  };
+
+  const BASE_COST_PER_CLAIM = 40000;
+  const SAVINGS_RATE = 0.58; // internal assumption -- never rendered in the UI
+
+  // OSHA $afety Pays sliding-scale indirect cost ratio table
+  // Source: https://www.osha.gov/safetypays/background
+  function getIndirectRatio(directCostPerClaim) {
+    if (directCostPerClaim < 3000) return 4.5;
+    if (directCostPerClaim < 5000) return 1.6;
+    if (directCostPerClaim < 10000) return 1.2;
+    return 1.1;
+  }
+
+  function zipToState(zip) {
+    const n = parseInt(String(zip).slice(0, 3), 10);
+    if (isNaN(n)) return null;
+    for (const [start, end, state] of ZIP_RANGES) {
+      if (n >= start && n <= end) return state;
+    }
+    return null;
+  }
+
+  function estimateClaims(employees, industryKey) {
+    const rate = INDUSTRY_RATE[industryKey] || INDUSTRY_RATE.other;
+    return Math.max(1, Math.round((employees / 100) * rate));
+  }
+
+  function calculate({ zip, industryKey, employees, knownClaims, companyCostPerClaim }) {
+    const state = zipToState(zip);
+    const regionIndex = (state && REGION_INDEX[state]) || 1.0;
+    const claims = (knownClaims && knownClaims > 0) ? knownClaims : estimateClaims(employees, industryKey);
+
+    let directCostPerClaim, usedCompanyData;
+    if (companyCostPerClaim && companyCostPerClaim > 0) {
+      directCostPerClaim = companyCostPerClaim; // already the company's real number
+      usedCompanyData = true;
+    } else {
+      directCostPerClaim = BASE_COST_PER_CLAIM * regionIndex; // national benchmark, regionally adjusted
+      usedCompanyData = false;
+    }
+
+    const indirectRatio = getIndirectRatio(directCostPerClaim);
+
+    const currentDirect = Math.round(claims * directCostPerClaim);
+    const currentIndirect = Math.round(currentDirect * indirectRatio);
+    const currentTotal = currentDirect + currentIndirect;
+
+    const projectedDirect = Math.round(currentDirect * (1 - SAVINGS_RATE));
+    const projectedIndirect = Math.round(currentIndirect * (1 - SAVINGS_RATE));
+    const projectedTotal = projectedDirect + projectedIndirect;
+
+    return {
+      state, regionIndex, claims, usedCompanyData, directCostPerClaim, indirectRatio,
+      currentDirect, currentIndirect, currentTotal,
+      projectedDirect, projectedIndirect, projectedTotal,
+      savingsTotal: currentTotal - projectedTotal
+    };
+  }
+
+  const fmt = new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 });
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  // ---- DOM refs ----
+  const root = document.getElementById('mcw-root');
+  const steps = root.querySelectorAll('.mcw-step');
+  const ticks = root.querySelectorAll('.mcw-tick');
+  const stepLabel = document.getElementById('mcw-step-label');
+  const title = document.getElementById('mcw-title');
+  const subtitle = document.getElementById('mcw-subtitle');
+
+  // Step 1: facility
+  const zip = document.getElementById('mcw-zip');
+  const industry = document.getElementById('mcw-industry');
+  const employees = document.getElementById('mcw-employees');
+  const claims = document.getElementById('mcw-claims');
+  const unknownClaims = document.getElementById('mcw-unknown-claims');
+  const costPerClaim = document.getElementById('mcw-cost-per-claim');
+  const errorFacility = document.getElementById('mcw-error-facility');
+  const toStep2Btn = document.getElementById('mcw-to-step2');
+
+  // Step 2: lead
+  const fname = document.getElementById('mcw-fname');
+  const lname = document.getElementById('mcw-lname');
+  const email = document.getElementById('mcw-email');
+  const consent = document.getElementById('mcw-consent');
+  const errorLead = document.getElementById('mcw-error-lead');
+  const toStep3Btn = document.getElementById('mcw-to-step3');
+  const back1Btn = document.getElementById('mcw-back-1');
+
+  const STEP_META = {
+    1: { label: 'STEP 1 OF 3', title: 'Tell us about your facility', sub: 'This is what drives the estimate — the more accurate, the better.' },
+    2: { label: 'STEP 2 OF 3', title: 'Almost there', sub: 'Where should we send your results?' },
+    3: { label: 'STEP 3 OF 3', title: 'Your estimated savings', sub: 'Here\u2019s what proactive injury prevention could mean for your bottom line.' }
+  };
+
+  function showStep(n) {
+    steps.forEach(s => s.classList.toggle('is-active', Number(s.dataset.step) === n));
+    ticks.forEach(t => {
+      const tn = Number(t.dataset.tick);
+      t.classList.toggle('is-active', tn === n);
+      t.classList.toggle('is-done', tn < n);
+    });
+    stepLabel.textContent = STEP_META[n].label;
+    title.textContent = STEP_META[n].title;
+    subtitle.textContent = STEP_META[n].sub;
+  }
+
+  function isValidEmail(v) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v); }
+
+  function validateFacility() {
+    const zipOk = /^\d{5}$/.test(zip.value.trim());
+    const industryOk = industry.value !== '';
+    const employeesOk = Number(employees.value) > 0;
+    const ok = zipOk && industryOk && employeesOk;
+    toStep2Btn.disabled = !ok;
+    return ok;
+  }
+  [zip, industry, employees, claims, costPerClaim].forEach(el => el.addEventListener('input', validateFacility));
+  unknownClaims.addEventListener('change', function () {
+    claims.disabled = unknownClaims.checked;
+    if (unknownClaims.checked) claims.value = '';
+    validateFacility();
+  });
+
+  function validateLead() {
+    const ok = fname.value.trim().length > 0 && lname.value.trim().length > 0 && isValidEmail(email.value.trim()) && consent.checked;
+    toStep3Btn.disabled = !ok;
+    return ok;
+  }
+  [fname, lname, email].forEach(el => el.addEventListener('input', validateLead));
+  consent.addEventListener('change', validateLead);
+
+  toStep2Btn.addEventListener('click', function () {
+    if (!validateFacility()) { errorFacility.textContent = 'Please fill in ZIP, industry, and employee count.'; return; }
+    errorFacility.textContent = '';
+    showStep(2);
+  });
+
+  back1Btn.addEventListener('click', function () { showStep(1); });
+
+  function animateNumber(el, target) {
+    if (prefersReducedMotion) { el.textContent = fmt.format(target); return; }
+    const duration = 900;
+    const start = performance.now();
+    function tick(now) {
+      const p = Math.min(1, (now - start) / duration);
+      const eased = 1 - Math.pow(1 - p, 3);
+      const val = Math.round(target * eased);
+      el.textContent = fmt.format(val);
+      if (p < 1) requestAnimationFrame(tick);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  function setStatic(el, val) { el.textContent = fmt.format(val); }
+
+  function sendLead(payload) {
+    if (!LEAD_CAPTURE_ENDPOINT) return; // not configured yet -- silently skip
+    fetch(LEAD_CAPTURE_ENDPOINT, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(payload)
+    }).catch(function () { /* fail silently -- never block the visitor's results */ });
+  }
+
+  toStep3Btn.addEventListener('click', function () {
+    if (!validateLead()) { errorLead.textContent = 'Please enter your name, a valid work email, and check the box to continue.'; return; }
+    errorLead.textContent = '';
+
+    const result = calculate({
+      zip: zip.value.trim(),
+      industryKey: industry.value,
+      employees: Number(employees.value),
+      knownClaims: unknownClaims.checked ? null : Number(claims.value),
+      companyCostPerClaim: Number(costPerClaim.value) || null
+    });
+
+    sendLead({
+      firstName: fname.value.trim(),
+      lastName: lname.value.trim(),
+      email: email.value.trim(),
+      consentGiven: true,
+      consentTimestamp: new Date().toISOString(),
+      zip: zip.value.trim(),
+      state: result.state,
+      industry: industry.value,
+      employees: Number(employees.value),
+      claimsUsed: result.claims,
+      usedCompanyCostData: result.usedCompanyData,
+      directCostPerClaim: result.directCostPerClaim,
+      indirectRatio: result.indirectRatio,
+      estimatedCurrentDirect: result.currentDirect,
+      estimatedCurrentIndirect: result.currentIndirect,
+      estimatedCurrentTotal: result.currentTotal,
+      estimatedSavingsTotal: result.savingsTotal
+    });
+
+    showStep(3);
+
+    animateNumber(document.getElementById('mcw-current-value'), result.currentTotal);
+    animateNumber(document.getElementById('mcw-projected-value'), result.projectedTotal);
+    animateNumber(document.getElementById('mcw-savings-figure'), result.savingsTotal);
+
+    setStatic(document.getElementById('mcw-direct-current'), result.currentDirect);
+    setStatic(document.getElementById('mcw-direct-projected'), result.projectedDirect);
+    setStatic(document.getElementById('mcw-indirect-current'), result.currentIndirect);
+    setStatic(document.getElementById('mcw-indirect-projected'), result.projectedIndirect);
+    setStatic(document.getElementById('mcw-total-current'), result.currentTotal);
+    setStatic(document.getElementById('mcw-total-projected'), result.projectedTotal);
+
+    requestAnimationFrame(function () {
+      document.getElementById('mcw-current-bar').style.width = '100%';
+      const ratio = Math.max(8, Math.round((result.projectedTotal / result.currentTotal) * 100));
+      document.getElementById('mcw-projected-bar').style.width = ratio + '%';
+    });
+  });
+
+  showStep(1);
+})();
+
+</script>
+
+</body>
+</html>
