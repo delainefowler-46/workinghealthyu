@@ -236,5 +236,7 @@ function closePopup(event){if(event.target===document.getElementById('booking-po
 document.addEventListener('keydown',function(e){if(e.key==='Escape'){document.getElementById('booking-popup').classList.remove('active');document.body.style.overflow='';}});
 document.querySelectorAll('.faq-question').forEach(function(btn){btn.addEventListener('click',function(){var item=this.closest('.faq-item');var wasOpen=item.classList.contains('open');document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');});if(!wasOpen)item.classList.add('open');});});
 </script>
+<!-- GoHighLevel chat widget -->
+<script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6abbdb14d198c6502bfc621d" data-source="WEB_USER"></script>
 </body>
 </html>
